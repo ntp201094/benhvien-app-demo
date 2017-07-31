@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		299E9E0EE5EDC4EDA15B0EA5 /* Pods_benhvien_app_simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC215FE9D897345F28A1C148 /* Pods_benhvien_app_simple.framework */; };
 		5241C8721F2B5A4B00485790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8711F2B5A4B00485790 /* main.m */; };
 		5241C87D1F2B5A4B00485790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5241C87C1F2B5A4B00485790 /* Assets.xcassets */; };
 		5241C8801F2B5A4B00485790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5241C87E1F2B5A4B00485790 /* LaunchScreen.storyboard */; };
@@ -24,9 +23,22 @@
 		5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8CD1F2B684D00485790 /* UIViewController+Storyboard.m */; };
 		5241C8D81F2B747A00485790 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8D71F2B747A00485790 /* AdvanceSearchViewController.m */; };
 		5241C8DB1F2B7C9B00485790 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8DA1F2B7C9B00485790 /* SearchResultViewController.m */; };
+		529E37551F2F518F004D114C /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37541F2F518F004D114C /* SearchResultTableViewCell.m */; };
+		529E375A1F2F5DD0004D114C /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37591F2F5DD0004D114C /* Hospital.m */; };
+		529E375D1F2F5EEE004D114C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E375C1F2F5EEE004D114C /* DetailViewController.m */; };
+		529E37651F2F6C52004D114C /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37601F2F6C52004D114C /* HLTableView.m */; };
+		529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37621F2F6C52004D114C /* HLTableViewCell.m */; };
+		529E37671F2F6C52004D114C /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37641F2F6C52004D114C /* HLTableViewSection.m */; };
+		529E37691F2F6DC0004D114C /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529E37681F2F6DBF004D114C /* SearchResultTableViewCell.xib */; };
+		529E376D1F2F6FA7004D114C /* HospitalNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E376B1F2F6FA7004D114C /* HospitalNameTableViewCell.m */; };
+		529E376E1F2F6FA7004D114C /* HospitalNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529E376C1F2F6FA7004D114C /* HospitalNameTableViewCell.xib */; };
+		529E37721F2F6FF4004D114C /* HospitalAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37701F2F6FF4004D114C /* HospitalAddressTableViewCell.m */; };
+		529E37731F2F6FF4004D114C /* HospitalAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529E37711F2F6FF4004D114C /* HospitalAddressTableViewCell.xib */; };
+		F57D35A3D3209A843F975B96 /* libPods-benhvien-app-simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050FA25AD8B5CA1C88D4311F /* libPods-benhvien-app-simple.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050FA25AD8B5CA1C88D4311F /* libPods-benhvien-app-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-benhvien-app-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5241C86D1F2B5A4B00485790 /* benhvien-app-simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "benhvien-app-simple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5241C8711F2B5A4B00485790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5241C87C1F2B5A4B00485790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +69,26 @@
 		5241C8D71F2B747A00485790 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		5241C8D91F2B7C9B00485790 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		5241C8DA1F2B7C9B00485790 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		529E37531F2F518F004D114C /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
+		529E37541F2F518F004D114C /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		529E37581F2F5DD0004D114C /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
+		529E37591F2F5DD0004D114C /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
+		529E375B1F2F5EEE004D114C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		529E375C1F2F5EEE004D114C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		529E375F1F2F6C52004D114C /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
+		529E37601F2F6C52004D114C /* HLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableView.m; sourceTree = "<group>"; };
+		529E37611F2F6C52004D114C /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
+		529E37621F2F6C52004D114C /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
+		529E37631F2F6C52004D114C /* HLTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewSection.h; sourceTree = "<group>"; };
+		529E37641F2F6C52004D114C /* HLTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewSection.m; sourceTree = "<group>"; };
+		529E37681F2F6DBF004D114C /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		529E376A1F2F6FA7004D114C /* HospitalNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalNameTableViewCell.h; sourceTree = "<group>"; };
+		529E376B1F2F6FA7004D114C /* HospitalNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalNameTableViewCell.m; sourceTree = "<group>"; };
+		529E376C1F2F6FA7004D114C /* HospitalNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalNameTableViewCell.xib; sourceTree = "<group>"; };
+		529E376F1F2F6FF4004D114C /* HospitalAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalAddressTableViewCell.h; sourceTree = "<group>"; };
+		529E37701F2F6FF4004D114C /* HospitalAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalAddressTableViewCell.m; sourceTree = "<group>"; };
+		529E37711F2F6FF4004D114C /* HospitalAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalAddressTableViewCell.xib; sourceTree = "<group>"; };
 		81F6CD847C76D23B95B5F4E2 /* Pods-benhvien-app-simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app-simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app-simple/Pods-benhvien-app-simple.release.xcconfig"; sourceTree = "<group>"; };
-		AC215FE9D897345F28A1C148 /* Pods_benhvien_app_simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_benhvien_app_simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0E70C6E08C0F752930F49A /* Pods-benhvien-app-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app-simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app-simple/Pods-benhvien-app-simple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299E9E0EE5EDC4EDA15B0EA5 /* Pods_benhvien_app_simple.framework in Frameworks */,
+				F57D35A3D3209A843F975B96 /* libPods-benhvien-app-simple.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +107,7 @@
 		37CA68E06726E701A1625237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC215FE9D897345F28A1C148 /* Pods_benhvien_app_simple.framework */,
+				050FA25AD8B5CA1C88D4311F /* libPods-benhvien-app-simple.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +133,7 @@
 		5241C86F1F2B5A4B00485790 /* benhvien-app-simple */ = {
 			isa = PBXGroup;
 			children = (
+				529E37561F2F5D99004D114C /* Model */,
 				5241C8871F2B5AA800485790 /* App */,
 				5241C88B1F2B5AAF00485790 /* ViewController */,
 				5241C88E1F2B5ACE00485790 /* Storyboard */,
@@ -157,12 +188,15 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				529E37521F2F5172004D114C /* View */,
 				5241C89A1F2B5B4500485790 /* HomeViewController.h */,
 				5241C89B1F2B5B4500485790 /* HomeViewController.m */,
 				5241C8D61F2B747A00485790 /* AdvanceSearchViewController.h */,
 				5241C8D71F2B747A00485790 /* AdvanceSearchViewController.m */,
 				5241C8D91F2B7C9B00485790 /* SearchResultViewController.h */,
 				5241C8DA1F2B7C9B00485790 /* SearchResultViewController.m */,
+				529E375B1F2F5EEE004D114C /* DetailViewController.h */,
+				529E375C1F2F5EEE004D114C /* DetailViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -178,6 +212,7 @@
 		5241C8C11F2B684D00485790 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				529E375E1F2F6C52004D114C /* Source */,
 				5241C8C21F2B684D00485790 /* Categories */,
 			);
 			path = Libraries;
@@ -206,6 +241,44 @@
 				5241C8C51F2B684D00485790 /* UIAlertController+Blocks.m */,
 			);
 			path = "UIAlertController-Blocks";
+			sourceTree = "<group>";
+		};
+		529E37521F2F5172004D114C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				529E37531F2F518F004D114C /* SearchResultTableViewCell.h */,
+				529E37541F2F518F004D114C /* SearchResultTableViewCell.m */,
+				529E37681F2F6DBF004D114C /* SearchResultTableViewCell.xib */,
+				529E376A1F2F6FA7004D114C /* HospitalNameTableViewCell.h */,
+				529E376B1F2F6FA7004D114C /* HospitalNameTableViewCell.m */,
+				529E376C1F2F6FA7004D114C /* HospitalNameTableViewCell.xib */,
+				529E376F1F2F6FF4004D114C /* HospitalAddressTableViewCell.h */,
+				529E37701F2F6FF4004D114C /* HospitalAddressTableViewCell.m */,
+				529E37711F2F6FF4004D114C /* HospitalAddressTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		529E37561F2F5D99004D114C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				529E37581F2F5DD0004D114C /* Hospital.h */,
+				529E37591F2F5DD0004D114C /* Hospital.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		529E375E1F2F6C52004D114C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				529E375F1F2F6C52004D114C /* HLTableView.h */,
+				529E37601F2F6C52004D114C /* HLTableView.m */,
+				529E37611F2F6C52004D114C /* HLTableViewCell.h */,
+				529E37621F2F6C52004D114C /* HLTableViewCell.m */,
+				529E37631F2F6C52004D114C /* HLTableViewSection.h */,
+				529E37641F2F6C52004D114C /* HLTableViewSection.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		A0501A0932F0AC2276809DC0 /* Pods */ = {
@@ -278,8 +351,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529E37731F2F6FF4004D114C /* HospitalAddressTableViewCell.xib in Resources */,
 				5241C8901F2B5ADE00485790 /* Home.storyboard in Resources */,
 				5241C8801F2B5A4B00485790 /* LaunchScreen.storyboard in Resources */,
+				529E37691F2F6DC0004D114C /* SearchResultTableViewCell.xib in Resources */,
+				529E376E1F2F6FA7004D114C /* HospitalNameTableViewCell.xib in Resources */,
 				5241C87D1F2B5A4B00485790 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,15 +416,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5241C8D01F2B684D00485790 /* UITextField+Padding.m in Sources */,
+				529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */,
 				5241C8CE1F2B684D00485790 /* UIAlertController+Blocks.m in Sources */,
+				529E37721F2F6FF4004D114C /* HospitalAddressTableViewCell.m in Sources */,
+				529E37651F2F6C52004D114C /* HLTableView.m in Sources */,
 				5241C8D11F2B684D00485790 /* UIView+Nib.m in Sources */,
+				529E375D1F2F5EEE004D114C /* DetailViewController.m in Sources */,
+				529E376D1F2F6FA7004D114C /* HospitalNameTableViewCell.m in Sources */,
 				5241C8991F2B5B2900485790 /* BaseTabBarController.m in Sources */,
 				5241C8961F2B5B1100485790 /* BaseNavigationController.m in Sources */,
 				5241C88A1F2B5AA800485790 /* AppDelegate.m in Sources */,
+				529E37551F2F518F004D114C /* SearchResultTableViewCell.m in Sources */,
+				529E37671F2F6C52004D114C /* HLTableViewSection.m in Sources */,
 				5241C8931F2B5AF700485790 /* BaseViewController.m in Sources */,
 				5241C8D81F2B747A00485790 /* AdvanceSearchViewController.m in Sources */,
 				5241C8DB1F2B7C9B00485790 /* SearchResultViewController.m in Sources */,
 				5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */,
+				529E375A1F2F5DD0004D114C /* Hospital.m in Sources */,
 				5241C8CF1F2B684D00485790 /* UIColor+Hex.m in Sources */,
 				5241C8721F2B5A4B00485790 /* main.m in Sources */,
 				5241C89C1F2B5B4500485790 /* HomeViewController.m in Sources */,

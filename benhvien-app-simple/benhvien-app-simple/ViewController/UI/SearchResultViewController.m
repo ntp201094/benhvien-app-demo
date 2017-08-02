@@ -51,11 +51,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchResultTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     Hospital *hospital = self.hospitalList[indexPath.row];
-    cell.imgView.image = [UIImage imageNamed:@"side-menu-bg"];
-    cell.lblName.text = hospital.name;
-    cell.lblCity.text = hospital.city;
-    cell.lblAddress.text = hospital.address;
-    cell.lblPhone.text = hospital.phone;
+    cell.resultImageView.image = [UIImage imageNamed:@"side-menu-bg"];
+    cell.resultNameLabel.text = hospital.name;
+    cell.resultCityLabel.text = hospital.city;
+    cell.resultAdressLabel.text = hospital.address;
+    cell.resultPhoneLabel.text = hospital.phone;
     
     return cell;
 }

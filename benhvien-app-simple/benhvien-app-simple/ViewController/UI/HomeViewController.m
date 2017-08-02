@@ -10,7 +10,7 @@
 #import "AdvanceSearchViewController.h"
 
 @interface HomeViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *txtSearch;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupMenuBarButton];
-    self.txtSearch.layer.borderWidth = 0.5f;
-    self.txtSearch.layer.borderColor = [[UIColor grayColor] CGColor];
-    self.txtSearch.layer.cornerRadius = 4.0;
+    self.searchTextField.layer.borderWidth = 0.5f;
+    self.searchTextField.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.searchTextField.layer.cornerRadius = 4.0;
     // Do any additional setup after loading the view.
 }
 

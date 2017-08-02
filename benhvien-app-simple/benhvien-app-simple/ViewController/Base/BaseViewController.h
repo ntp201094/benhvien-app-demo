@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
+
 - (void)setupMenuBarButton;
 - (void)setupBackBarButtton;
+
 @end

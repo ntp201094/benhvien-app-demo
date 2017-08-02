@@ -10,4 +10,6 @@
 
 @interface SearchResultViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

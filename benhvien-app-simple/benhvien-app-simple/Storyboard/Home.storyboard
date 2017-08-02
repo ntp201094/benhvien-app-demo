@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XGj-He-2db">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XGj-He-2db">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,7 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e76-GZ-UpS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e76-GZ-UpS">
                                         <rect key="frame" x="20" y="3" width="282" height="45"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -178,10 +177,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkb-h0-JEH">
-                                <rect key="frame" x="36" y="282" width="303" height="45"/>
+                                <rect key="frame" x="20" y="262" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.46274509800000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="GHm-uP-muI"/>
+                                    <constraint firstAttribute="height" constant="45" id="JOC-Ph-okv"/>
                                 </constraints>
                                 <state key="normal" title="Tìm kiếm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,18 +191,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="finishSearch:" destination="afx-6T-Zwi" eventType="touchUpInside" id="hsu-sd-eZt"/>
+                                    <action selector="searchHospital:" destination="afx-6T-Zwi" eventType="touchUpInside" id="PQ7-cc-N5j"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dlN-RK-FLL" firstAttribute="top" secondItem="3jq-nS-gXv" secondAttribute="top" constant="124" id="38M-Ds-RGa"/>
+                            <constraint firstAttribute="trailing" secondItem="rkb-h0-JEH" secondAttribute="trailing" constant="20" id="3FZ-Vs-vpf"/>
                             <constraint firstItem="dlN-RK-FLL" firstAttribute="leading" secondItem="3jq-nS-gXv" secondAttribute="leading" id="Egn-q1-3jq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rkb-h0-JEH" secondAttribute="trailing" constant="20" id="Fzy-iR-Dri"/>
+                            <constraint firstItem="rkb-h0-JEH" firstAttribute="leading" secondItem="3jq-nS-gXv" secondAttribute="leading" constant="20" id="EmJ-qd-Tn3"/>
                             <constraint firstAttribute="trailing" secondItem="dlN-RK-FLL" secondAttribute="trailing" id="LH4-eZ-kmr"/>
-                            <constraint firstItem="rkb-h0-JEH" firstAttribute="top" secondItem="dlN-RK-FLL" secondAttribute="bottom" constant="60" id="bCQ-E5-pGK"/>
-                            <constraint firstItem="rkb-h0-JEH" firstAttribute="leading" secondItem="3jq-nS-gXv" secondAttribute="leadingMargin" constant="20" id="wjI-ma-8GZ"/>
+                            <constraint firstItem="rkb-h0-JEH" firstAttribute="top" secondItem="dlN-RK-FLL" secondAttribute="bottom" constant="40" id="j7Y-Lc-7ME"/>
                         </constraints>
                     </view>
                     <connections>
@@ -228,17 +227,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fe-Jb-IPo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ZmE-3C-tUh" customClass="SearchResultTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ZmE-3C-tUh" customClass="SearchResultTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZmE-3C-tUh" id="rQC-LJ-ojP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tft-vY-aVe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tft-vY-aVe">
                                                     <rect key="frame" x="8" y="9" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -285,6 +284,7 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="HQ3-w7-7cC" id="S8P-6g-aLm"/>
                                     <outlet property="delegate" destination="HQ3-w7-7cC" id="O62-5P-dtI"/>
@@ -293,10 +293,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7fe-Jb-IPo" firstAttribute="top" secondItem="eh1-NJ-vq1" secondAttribute="bottom" constant="8" id="5Zh-UC-A65"/>
-                            <constraint firstAttribute="trailing" secondItem="7fe-Jb-IPo" secondAttribute="trailing" id="Q5U-sL-xa6"/>
-                            <constraint firstItem="8rO-G2-QZP" firstAttribute="top" secondItem="7fe-Jb-IPo" secondAttribute="bottom" id="cFB-JL-jHc"/>
-                            <constraint firstItem="7fe-Jb-IPo" firstAttribute="leading" secondItem="EWS-3G-rdU" secondAttribute="leading" id="yn1-HE-1xB"/>
+                            <constraint firstItem="7fe-Jb-IPo" firstAttribute="leading" secondItem="EWS-3G-rdU" secondAttribute="leading" id="3QC-g5-ffx"/>
+                            <constraint firstItem="8rO-G2-QZP" firstAttribute="top" secondItem="7fe-Jb-IPo" secondAttribute="bottom" id="Ij5-QV-NI9"/>
+                            <constraint firstAttribute="trailing" secondItem="7fe-Jb-IPo" secondAttribute="trailing" id="Iwk-e4-ESb"/>
+                            <constraint firstItem="7fe-Jb-IPo" firstAttribute="top" secondItem="EWS-3G-rdU" secondAttribute="top" id="YmT-gv-XwW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -319,7 +319,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h31-ff-XgH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="h31-ff-XgH">
                                 <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -416,5 +416,6 @@
         <image name="caret-down" width="20" height="12"/>
         <image name="right-arrow" width="9" height="14"/>
         <image name="search-btn-icon" width="30" height="31"/>
+        <image name="side-menu-bg" width="375" height="667"/>
     </resources>
 </document>

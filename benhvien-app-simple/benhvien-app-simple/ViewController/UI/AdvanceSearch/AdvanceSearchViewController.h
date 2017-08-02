@@ -10,4 +10,7 @@
 
 @interface AdvanceSearchViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *provinceView;
+@property (weak, nonatomic) IBOutlet UIView *districtView;
+
 @end

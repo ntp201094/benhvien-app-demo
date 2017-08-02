@@ -10,4 +10,6 @@
 
 @interface HomeViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
 @end

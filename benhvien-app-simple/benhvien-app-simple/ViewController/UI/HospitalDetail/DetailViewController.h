@@ -10,5 +10,8 @@
 #import "Hospital.h"
 
 @interface DetailViewController : BaseViewController
+
 @property (strong, nonatomic) Hospital *hostpital;
+
+
 @end

@@ -12,7 +12,7 @@
 #import "DetailViewController.h"
 
 @interface SearchResultViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (nonatomic) NSMutableArray *hospitalList;
 
 @end
@@ -32,13 +32,13 @@
         hospital.phone = @"89.39235791 - 39235821 - 39237007";
         [self.hospitalList addObject:hospital];
     }
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -65,15 +65,5 @@
     vc.hostpital = self.hospitalList[indexPath.row];
     [self.navigationController showViewController:vc sender:self];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

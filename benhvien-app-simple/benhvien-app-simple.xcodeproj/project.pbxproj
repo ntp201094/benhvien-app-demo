@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520B260C1F34997300137206 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260B1F34997300137206 /* ApiManager.m */; };
+		520B260F1F34998000137206 /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260E1F34998000137206 /* ApiRequest.m */; };
+		520B26121F34998F00137206 /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B26111F34998F00137206 /* ApiResponse.m */; };
 		523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */; };
 		523DC9C51F31F52200039835 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B31F31F52200039835 /* HomeViewController.m */; };
 		523DC9C61F31F52200039835 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B61F31F52200039835 /* DetailViewController.m */; };
@@ -38,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520B26091F34982300137206 /* ApiEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
+		520B260A1F34997300137206 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		520B260B1F34997300137206 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		520B260D1F34998000137206 /* ApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiRequest.h; sourceTree = "<group>"; };
+		520B260E1F34998000137206 /* ApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRequest.m; sourceTree = "<group>"; };
+		520B26101F34998F00137206 /* ApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiResponse.h; sourceTree = "<group>"; };
+		520B26111F34998F00137206 /* ApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiResponse.m; sourceTree = "<group>"; };
 		523DC9AF1F31F52200039835 /* AdvanceSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceSearchViewController.h; sourceTree = "<group>"; };
 		523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		523DC9B21F31F52200039835 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -110,6 +120,20 @@
 				82CB3F7C591A4F53713EDDAF /* Pods_benhvien_app_simple.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		520B26081F34981100137206 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				520B26091F34982300137206 /* ApiEndpoint.h */,
+				520B260A1F34997300137206 /* ApiManager.h */,
+				520B260B1F34997300137206 /* ApiManager.m */,
+				520B260D1F34998000137206 /* ApiRequest.h */,
+				520B260E1F34998000137206 /* ApiRequest.m */,
+				520B26101F34998F00137206 /* ApiResponse.h */,
+				520B26111F34998F00137206 /* ApiResponse.m */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		523DC9AE1F31F52200039835 /* AdvanceSearch */ = {
@@ -186,6 +210,7 @@
 		5241C86F1F2B5A4B00485790 /* benhvien-app-simple */ = {
 			isa = PBXGroup;
 			children = (
+				520B26081F34981100137206 /* Api */,
 				529E37561F2F5D99004D114C /* Model */,
 				5241C8871F2B5AA800485790 /* App */,
 				5241C88B1F2B5AAF00485790 /* ViewController */,
@@ -448,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5241C8D01F2B684D00485790 /* UITextField+Padding.m in Sources */,
+				520B26121F34998F00137206 /* ApiResponse.m in Sources */,
 				529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */,
 				523DC9C61F31F52200039835 /* DetailViewController.m in Sources */,
 				5241C8CE1F2B684D00485790 /* UIAlertController+Blocks.m in Sources */,
@@ -455,9 +481,11 @@
 				5241C8D11F2B684D00485790 /* UIView+Nib.m in Sources */,
 				5241C8991F2B5B2900485790 /* BaseTabBarController.m in Sources */,
 				5241C8961F2B5B1100485790 /* BaseNavigationController.m in Sources */,
+				520B260C1F34997300137206 /* ApiManager.m in Sources */,
 				523DC9C91F31F52200039835 /* HospitalNameTableViewCell.m in Sources */,
 				523DC9C51F31F52200039835 /* HomeViewController.m in Sources */,
 				523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */,
+				520B260F1F34998000137206 /* ApiRequest.m in Sources */,
 				523DC9CD1F31F52200039835 /* SearchResultViewController.m in Sources */,
 				5241C88A1F2B5AA800485790 /* AppDelegate.m in Sources */,
 				529E37671F2F6C52004D114C /* HLTableViewSection.m in Sources */,

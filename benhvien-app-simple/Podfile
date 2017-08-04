@@ -8,5 +8,7 @@ target 'benhvien-app-simple' do
     pod 'IQKeyboardManager'
     pod 'IQDropDownTextField'
     pod 'KASlideShow'
+    pod 'AFNetworking'
+    pod 'MBProgressHUD'
 
 end

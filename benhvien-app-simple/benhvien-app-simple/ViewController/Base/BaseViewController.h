@@ -12,5 +12,6 @@
 
 - (void)setupMenuBarButton;
 - (void)setupBackBarButtton;
-
+- (void)showHUD;
+- (void)hideHUD;
 @end

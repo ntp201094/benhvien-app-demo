@@ -13,4 +13,6 @@
 
 #define LOGIN           @"authenticate"
 
+#define SearchByName    @"hospitals-name"
+
 #endif /* ApiEndpoint_h */

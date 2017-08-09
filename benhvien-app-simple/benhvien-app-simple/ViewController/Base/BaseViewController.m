@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "UIAlertController+Blocks.h"
 
 @interface BaseViewController ()
 
@@ -47,6 +48,16 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self.view animated:true];
     });
+}
+
+- (void)showMessage:(NSString *)message {
+    [UIAlertController showAlertInViewController:self
+                                       withTitle:@"Loi"
+                                         message:message
+                               cancelButtonTitle:@"OK"
+                          destructiveButtonTitle:nil
+                               otherButtonTitles:nil
+                                        tapBlock:nil];
 }
 
 @end

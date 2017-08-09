@@ -17,4 +17,9 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:LOGIN method:POST parameters:parameters completion:completion];
 }
 
++ (void)searchHospitalByName:(NSString *)name completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{@"name": name};
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters completion:completion];
+}
+
 @end

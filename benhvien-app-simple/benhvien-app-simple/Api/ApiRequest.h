@@ -11,5 +11,8 @@
 #import "ApiManager.h"
 
 @interface ApiRequest : NSObject
+
 + (void)loginWithEmail:(NSString *)email password:(NSString *)password completionBlock:(ApiComplitionBlock)completion;
++ (void)searchHospitalByName:(NSString *)name completionBlock:(ApiComplitionBlock)completion;
+
 @end

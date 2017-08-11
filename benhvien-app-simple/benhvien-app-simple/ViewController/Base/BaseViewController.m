@@ -50,9 +50,9 @@
     });
 }
 
-- (void)showMessage:(NSString *)message {
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     [UIAlertController showAlertInViewController:self
-                                       withTitle:@"Loi"
+                                       withTitle:title
                                          message:message
                                cancelButtonTitle:@"OK"
                           destructiveButtonTitle:nil

@@ -14,5 +14,5 @@
 - (void)setupBackBarButtton;
 - (void)showHUD;
 - (void)hideHUD;
-- (void)showMessage:(NSString *)message;
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 @end

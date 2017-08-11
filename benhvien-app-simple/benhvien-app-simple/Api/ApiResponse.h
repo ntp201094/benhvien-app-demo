@@ -10,7 +10,10 @@
 
 @interface ApiResponse : NSObject
 
-@property (nonatomic) NSDictionary *data;
+@property (nonatomic) id data;
+@property (nonatomic) NSDictionary *originalResponse;
+@property (nonatomic) bool success;
+@property (nonatomic) NSString *message;
 
 + (instancetype)initWithResponse:(NSDictionary *)response;
 

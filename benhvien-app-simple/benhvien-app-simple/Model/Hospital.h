@@ -7,10 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HospitalSerializer.h"
 
 @interface Hospital : NSObject
+@property (nonatomic) NSString *hospitalId;
+@property (nonatomic) NSString *avatar;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *city;
 @property (nonatomic) NSString *address;
-@property (nonatomic) NSString *phone;
+@property (nonatomic) NSString *phones;
+@property (nonatomic) NSString *hospitalDescription;
+@property (nonatomic) NSArray *images;
+
+- (id)initWithSerializer:(HospitalSerializer *)hospitalSerializer;
+- (NSMutableArray *)parseArrayFromSerializers:(NSArray *)serializers;
 @end

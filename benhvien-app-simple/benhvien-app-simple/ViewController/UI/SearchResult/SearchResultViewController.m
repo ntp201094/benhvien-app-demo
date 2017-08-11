@@ -10,10 +10,9 @@
 #import "SearchResultTableViewCell.h"
 #import "Hospital.h"
 #import "DetailViewController.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface SearchResultViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic) NSMutableArray *hospitalList;
 
 @end
 
@@ -23,15 +22,6 @@
     [super viewDidLoad];
     [self setupBackBarButtton];
     self.title = @"Kết quả";
-    self.hospitalList = [NSMutableArray new];
-    for (int i = 0; i < 10; i++) {
-        Hospital *hospital = [Hospital new];
-        hospital.name = @"Benh vien chan thuong chinh hinh";
-        hospital.city = @"Ho Chi Minh";
-        hospital.address = @"929 Tran Hung Dao - Phuong 1 - Quan 5 - TP. Ho Chi Minh";
-        hospital.phone = @"89.39235791 - 39235821 - 39237007";
-        [self.hospitalList addObject:hospital];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,17 +35,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.hospitalList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchResultTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     Hospital *hospital = self.hospitalList[indexPath.row];
-    cell.resultImageView.image = [UIImage imageNamed:@"side-menu-bg"];
+    [cell.resultImageView sd_setImageWithURL:[NSURL URLWithString:hospital.avatar]];
     cell.resultNameLabel.text = hospital.name;
     cell.resultCityLabel.text = hospital.city;
     cell.resultAdressLabel.text = hospital.address;
-    cell.resultPhoneLabel.text = hospital.phone;
+    cell.resultPhoneLabel.text = hospital.phones;
     
     return cell;
 }

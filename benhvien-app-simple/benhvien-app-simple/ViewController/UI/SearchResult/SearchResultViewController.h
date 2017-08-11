@@ -10,6 +10,7 @@
 
 @interface SearchResultViewController : BaseViewController
 
+@property (strong, nonatomic) NSArray *hospitalList;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

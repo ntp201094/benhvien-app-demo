@@ -34,6 +34,7 @@
 		5241C8D11F2B684D00485790 /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8CB1F2B684D00485790 /* UIView+Nib.m */; };
 		5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8CD1F2B684D00485790 /* UIViewController+Storyboard.m */; };
 		524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */; };
+		5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5250653C1F41D0B60011B517 /* CitySerializer.m */; };
 		529E375A1F2F5DD0004D114C /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37591F2F5DD0004D114C /* Hospital.m */; };
 		529E37651F2F6C52004D114C /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37601F2F6C52004D114C /* HLTableView.m */; };
 		529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37621F2F6C52004D114C /* HLTableViewCell.m */; };
@@ -92,6 +93,8 @@
 		5241C8CD1F2B684D00485790 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		524A559F1F3DE20E00DBAB4E /* HospitalSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalSerializer.h; sourceTree = "<group>"; };
 		524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSerializer.m; sourceTree = "<group>"; };
+		5250653B1F41D0B60011B517 /* CitySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySerializer.h; sourceTree = "<group>"; };
+		5250653C1F41D0B60011B517 /* CitySerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySerializer.m; sourceTree = "<group>"; };
 		529E37581F2F5DD0004D114C /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
 		529E37591F2F5DD0004D114C /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
 		529E375F1F2F6C52004D114C /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 			children = (
 				524A559F1F3DE20E00DBAB4E /* HospitalSerializer.h */,
 				524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */,
+				5250653B1F41D0B60011B517 /* CitySerializer.h */,
+				5250653C1F41D0B60011B517 /* CitySerializer.m */,
 			);
 			path = Serializers;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				5241C8931F2B5AF700485790 /* BaseViewController.m in Sources */,
 				5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */,
 				529E375A1F2F5DD0004D114C /* Hospital.m in Sources */,
+				5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */,
 				5241C8CF1F2B684D00485790 /* UIColor+Hex.m in Sources */,
 				524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */,
 				5241C8721F2B5A4B00485790 /* main.m in Sources */,

@@ -18,7 +18,7 @@
     self.address = hospitalSerializer.street;
     self.phones = [NSString new];
     for (NSString *phone in hospitalSerializer.phones) {
-        [self.phones stringByAppendingString:phone];
+        self.phones = [self.phones stringByAppendingString:phone];
     }
     self.hospitalDescription = hospitalSerializer.hospitalDescription;
     self.images = hospitalSerializer.images;

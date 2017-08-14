@@ -22,4 +22,8 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters completion:completion];
 }
 
++ (void)getAllCitiesWithCompletionBlock:(ApiComplitionBlock)completion {
+    [[ApiManager sharedClient] requestApiWithEndpoint:GetAllCities method:GET parameters:nil completion:completion];
+}
+
 @end

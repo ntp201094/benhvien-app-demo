@@ -44,8 +44,8 @@
     [cell.resultImageView sd_setImageWithURL:[NSURL URLWithString:hospital.avatar]];
     cell.resultNameLabel.text = hospital.name;
     cell.resultCityLabel.text = hospital.city;
-    cell.resultAdressLabel.text = hospital.address;
-    cell.resultPhoneLabel.text = hospital.phones;
+    cell.resultAdressLabel.text = [NSString stringWithFormat:@"Địa chỉ: %@", hospital.address];
+    cell.resultPhoneLabel.text = [NSString stringWithFormat:@"Điện thoại: %@", hospital.phones];
     
     return cell;
 }

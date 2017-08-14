@@ -14,5 +14,6 @@
 
 + (void)loginWithEmail:(NSString *)email password:(NSString *)password completionBlock:(ApiComplitionBlock)completion;
 + (void)searchHospitalByName:(NSString *)name completionBlock:(ApiComplitionBlock)completion;
++ (void)getAllCitiesWithCompletionBlock:(ApiComplitionBlock)completion;
 
 @end

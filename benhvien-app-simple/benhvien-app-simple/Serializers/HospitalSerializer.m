@@ -28,8 +28,8 @@
 - (NSArray *)parseArrayFromDatas:(NSArray *)datas {
     NSMutableArray *result = [NSMutableArray new];
     for (NSDictionary *data in datas) {
-        HospitalSerializer *newInformation = [[HospitalSerializer alloc] initWithDataObject:data];
-        [result addObject:newInformation];
+        HospitalSerializer *newHospital = [[HospitalSerializer alloc] initWithDataObject:data];
+        [result addObject:newHospital];
     }
     
     return result;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ApiRequest.h"
 
 @interface BaseViewController : UIViewController
 

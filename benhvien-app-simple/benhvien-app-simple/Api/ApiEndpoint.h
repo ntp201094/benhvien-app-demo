@@ -15,4 +15,6 @@
 
 #define SearchByName    @"hospitals-name"
 
+#define GetAllCities    @"cities"
+
 #endif /* ApiEndpoint_h */

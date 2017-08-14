@@ -7,10 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import <IQDropDownTextField/IQDropDownTextField.h>
 
 @interface AdvanceSearchViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIView *provinceView;
 @property (weak, nonatomic) IBOutlet UIView *districtView;
+@property (weak, nonatomic) IBOutlet IQDropDownTextField *provinceDropDownTextField;
+@property (weak, nonatomic) IBOutlet IQDropDownTextField *districtDropDownTextField;
 
 @end

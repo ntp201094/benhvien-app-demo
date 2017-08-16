@@ -26,4 +26,20 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:GetAllCities method:GET parameters:nil completion:completion];
 }
 
++ (void)searchHospitalByProvince:(NSString *)province district:(NSString *)district completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{@"city": province,
+                                 @"district": district};
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByLocation method:GET parameters:parameters completion:completion];
+}
+
++ (void)searchHospitalByProvince:(NSString *)province completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{ @"city": province };
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByProvince method:GET parameters:parameters completion:completion];
+}
+
++ (void)getHospitalDetailById:(NSString *)hospitalId completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{ @"id": hospitalId };
+    [[ApiManager sharedClient] requestApiWithEndpoint:GetHospitalDetail method:GET parameters:parameters completion:completion];
+}
+
 @end

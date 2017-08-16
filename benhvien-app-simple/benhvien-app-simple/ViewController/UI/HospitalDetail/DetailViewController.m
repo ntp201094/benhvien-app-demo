@@ -18,10 +18,21 @@
     [super viewDidLoad];
     [self setupBackBarButtton];
     self.title = self.hostpital.name;
+    [self reloadHospitalInfoById:self.hostpital.hospitalId];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)reloadHospitalInfoById:(NSString *)hospitalId {
+    [self showHUD];
+    [ApiRequest getHospitalDetailById:hospitalId completionBlock:^(ApiResponse *response, NSError *error) {
+        if (!error) {
+            [self showAlertWithTitle:@"Thong bao" message:@"Loading..."];
+        }
+        [self hideHUD];
+    }];
 }
 
 @end

@@ -11,12 +11,36 @@
 @implementation HospitalSerializer
 
 - (id)initWithDataObject:(NSDictionary *)dataObject {
-    self.hospitalId = [dataObject objectForKey:@"_id"];
-    self.avatar = [dataObject objectForKey:@"avatar"];
-    self.city = [dataObject objectForKey:@"city"];
-    self.hospitalDescription = [dataObject objectForKey:@"description"];
-    self.district = [dataObject objectForKey:@"district"];
-    self.images = [dataObject objectForKey:@"images"];
+    NSString *hospitalId = [dataObject objectForKey:@"_id"];
+    if (hospitalId && ![hospitalId isKindOfClass:[NSNull class]]) {
+        self.hospitalId = hospitalId;
+    }
+    
+    NSString *avatar = [dataObject objectForKey:@"avatar"];
+    if (avatar && ![avatar isKindOfClass:[NSNull class]]) {
+        self.avatar = avatar;
+    }
+    
+    NSString *city = [dataObject objectForKey:@"city"];
+    if (city && ![city isKindOfClass:[NSNull class]]) {
+        self.city = city;
+    }
+    
+    NSString *hospitalDescription = [dataObject objectForKey:@"description"];
+    if (hospitalDescription && ![hospitalDescription isKindOfClass:[NSNull class]]) {
+        self.hospitalDescription = hospitalDescription;
+    }
+    
+    NSString *district = [dataObject objectForKey:@"district"];
+    if (district && ![district isKindOfClass:[NSNull class]]) {
+        self.district = district;
+    }
+    
+    NSArray *images = [dataObject objectForKey:@"images"];
+    if (images && ![images isKindOfClass:[NSNull class]]) {
+        self.images = images;
+    }
+    
     self.latitude = [[dataObject objectForKey:@"latitude"] doubleValue];
     self.longitude = [[dataObject objectForKey:@"longitude"] doubleValue];
     self.name = [dataObject objectForKey:@"name"];

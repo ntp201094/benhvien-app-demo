@@ -8,10 +8,12 @@
 
 #import "BaseViewController.h"
 #import "Hospital.h"
+#import "HLTableView.h"
 
 @interface DetailViewController : BaseViewController
 
 @property (strong, nonatomic) Hospital *hostpital;
+@property (weak, nonatomic) IBOutlet HLTableView *tableView;
 
 
 @end

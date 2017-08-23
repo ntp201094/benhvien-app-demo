@@ -7,6 +7,7 @@
 //
 
 #import "DescriptionTableViewCell.h"
+#import "HospitalDescription.h"
 
 @implementation DescriptionTableViewCell
 
@@ -19,6 +20,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - HLTableViewCell datasource
+
+- (void)configureCell:(id)model {
+    HospitalDescription *descriptionModel = (HospitalDescription *)model;
+    _hospitalDescriptionLabel.text = descriptionModel.hospitalDescription;
 }
 
 @end

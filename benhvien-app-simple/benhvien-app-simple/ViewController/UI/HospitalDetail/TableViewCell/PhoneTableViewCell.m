@@ -7,6 +7,7 @@
 //
 
 #import "PhoneTableViewCell.h"
+#import "HospitalPhone.h"
 
 @implementation PhoneTableViewCell
 
@@ -19,6 +20,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - HLTableViewCell datasource
+
+- (void)configureCell:(id)model {
+    HospitalPhone *phoneModel = (HospitalPhone *)model;
+    _hospitalPhoneLabel.text = phoneModel.phone;
 }
 
 @end

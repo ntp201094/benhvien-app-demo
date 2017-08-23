@@ -7,6 +7,7 @@
 //
 
 #import "NameTableViewCell.h"
+#import "HospitalName.h"
 
 @implementation NameTableViewCell
 
@@ -19,6 +20,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - HLTableViewCell datasource
+
+- (void)configureCell:(id)model {
+    HospitalName *nameModel = (HospitalName *)model;
+    _hospitalNameLabel.text = nameModel.name;
 }
 
 @end

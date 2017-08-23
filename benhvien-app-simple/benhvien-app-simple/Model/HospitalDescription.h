@@ -10,4 +10,6 @@
 
 @interface HospitalDescription : NSObject
 
+@property (weak, nonatomic) NSString *hospitalDescription;
+
 @end

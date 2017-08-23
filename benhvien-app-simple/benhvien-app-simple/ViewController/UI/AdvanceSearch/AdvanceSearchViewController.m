@@ -52,20 +52,23 @@
     [self showHUD];
     [ApiRequest getAllCitiesWithCompletionBlock:^(ApiResponse *response, NSError *error) {
         if (!error) {
-            NSLog(@"%@", response.originalResponse);
-            NSArray *data = [response.data objectForKey:@"cities"];
-            if (data.count > 0) {
-                self.citySerializers = [[CitySerializer alloc] parseArrayFromDatas:data];
-                
-                [self.provinceDropDownTextField setItemList:[self.citySerializers valueForKey:@"name"]];
-                [self reloadDistrictDropDownTextFieldWithCity:self.citySerializers[0]];
+            if (response.success) {
+                NSLog(@"%@", response.originalResponse);
+                NSArray *data = [response.data objectForKey:@"cities"];
+                if (data.count > 0) {
+                    self.citySerializers = [[CitySerializer alloc] parseArrayFromDatas:data];
+                    [self.provinceDropDownTextField setItemList:[self.citySerializers valueForKey:@"name"]];
+                    [self reloadDistrictDropDownTextFieldWithCity:self.citySerializers[0]];
+                } else {
+                    [self showAlertWithTitle:@"Loi" message:@"Khong tim thay du lieu"];
+                }
             } else {
-                
+                [self showAlertWithTitle:@"Loi" message:response.message];
             }
-            [self hideHUD];
         } else {
             NSLog(@"%@", [error localizedDescription]);
         }
+        [self hideHUD];
     }];
 }
 

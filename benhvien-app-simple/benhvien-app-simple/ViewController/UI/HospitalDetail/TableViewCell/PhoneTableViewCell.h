@@ -11,4 +11,6 @@
 
 @interface PhoneTableViewCell : HLTableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *hospitalPhoneLabel;
+
 @end

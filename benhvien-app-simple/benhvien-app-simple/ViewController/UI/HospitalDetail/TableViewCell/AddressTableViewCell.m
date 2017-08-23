@@ -7,6 +7,7 @@
 //
 
 #import "AddressTableViewCell.h"
+#import "HospitalAddress.h"
 
 @implementation AddressTableViewCell
 
@@ -19,6 +20,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - HLTableViewCell datasource
+
+- (void)configureCell:(id)model {
+    HospitalAddress *addresModel = (HospitalAddress *)model;
+    _hospitalAddressLabel.text = addresModel.address;
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface HospitalThumbImage : NSObject
 
+@property (weak, nonatomic) NSArray *images;
+
 @end

@@ -43,9 +43,15 @@
     [ApiRequest getHospitalDetailById:hospitalId completionBlock:^(ApiResponse *response, NSError *error) {
         if (!error) {
             if (response.success) {
-                HospitalSerializer *serializer = [[HospitalSerializer alloc] initWithDataObject:response.data];
-                Hospital *hospital = [[Hospital alloc] initWithSerializer:serializer];
-                [self.tableView addItems:[self getTableViewDataByHospital:hospital]];
+                NSLog(@"%@", response.originalResponse);
+                NSDictionary *data = [response.data objectForKey:@"hospitalInfo"];
+                if (data) {
+                    HospitalSerializer *serializer = [[HospitalSerializer alloc] initWithDataObject:data];
+                    Hospital *hospital = [[Hospital alloc] initWithSerializer:serializer];
+                    [self.tableView addItems:[self getTableViewDataByHospital:hospital]];
+                } else {
+                    [self showAlertWithTitle:@"Loi" message:@"Khong tim thay du lieu"];
+                }
             } else {
                 [self showAlertWithTitle:@"Loi" message:response.message];
             }
@@ -58,18 +64,29 @@
 
 - (NSMutableArray *)getTableViewDataByHospital:(Hospital *)hospital {
     NSMutableArray *datas = [NSMutableArray new];
-    HospitalThumbImage *thumbImage = [HospitalThumbImage new];
-    [datas addObject:thumbImage];
-    HospitalName *name = [HospitalName new];
-    [datas addObject:name];
-    HospitalAddress *address = [HospitalAddress new];
-    [datas addObject:address];
-    HospitalPhone *phone = [HospitalPhone new];
-    [datas addObject:phone];
-    HospitalDescription *description = [HospitalDescription new];
-    [datas addObject:description];
-    HospitalLocation *location = [HospitalLocation new];
-    [datas addObject:location];
+    HospitalThumbImage *thumbImageModel = [HospitalThumbImage new];
+    thumbImageModel.images = hospital.images;
+    [datas addObject:thumbImageModel];
+    
+    HospitalName *nameModel = [HospitalName new];
+    nameModel.name = hospital.name;
+    [datas addObject:nameModel];
+    
+    HospitalAddress *addressModel = [HospitalAddress new];
+    addressModel.address = hospital.address;
+    [datas addObject:addressModel];
+    
+    HospitalPhone *phoneModel = [HospitalPhone new];
+    phoneModel.phone = hospital.phones;
+    [datas addObject:phoneModel];
+    
+    HospitalDescription *descriptionModel = [HospitalDescription new];
+    descriptionModel.hospitalDescription = hospital.hospitalDescription;
+    [datas addObject:descriptionModel];
+    
+    HospitalLocation *locationModel = [HospitalLocation new];
+    [datas addObject:locationModel];
+    
     return datas;
 }
 

@@ -12,7 +12,7 @@
 
 @interface ThumbImageTableViewCell : HLTableViewCell <KASlideShowDataSource, KASlideShowDelegate>
 
-@property (nonatomic) NSArray *dataSource;
+@property (nonatomic) NSMutableArray *dataSource;
 @property (strong, nonatomic) IBOutlet KASlideShow *slideShow;
 
 

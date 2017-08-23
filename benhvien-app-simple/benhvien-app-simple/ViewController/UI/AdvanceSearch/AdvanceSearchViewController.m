@@ -33,7 +33,10 @@
     self.districtView.layer.cornerRadius = 5;
     self.provinceDropDownTextField.isOptionalDropDown = NO;
     self.districtDropDownTextField.isOptionalDropDown = NO;
+    self.provinceCaretUpImageView.hidden = true;
+    self.districtCaretUpImageView.hidden = true;
     self.provinceDropDownTextField.delegate = self;
+    self.districtDropDownTextField.delegate = self;
     self.title = @"Tìm kiếm nâng cao";
     [self reloadAdvancedSearchingPickerData];
 }
@@ -112,5 +115,26 @@
     
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField == self.provinceDropDownTextField) {
+        self.provinceCaretUpImageView.hidden = false;
+        self.provinceCaretDownImageView.hidden = true;
+    } else {
+        // district
+        self.districtCaretUpImageView.hidden = false;
+        self.districtCaretDownImageView.hidden = true;
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (textField == self.provinceDropDownTextField) {
+        self.provinceCaretUpImageView.hidden = true;
+        self.provinceCaretDownImageView.hidden = false;
+    } else {
+        // district
+        self.districtCaretUpImageView.hidden = true;
+        self.districtCaretDownImageView.hidden = false;
+    }
+}
 
 @end

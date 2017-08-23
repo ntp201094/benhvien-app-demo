@@ -22,6 +22,9 @@
     }
     self.hospitalDescription = hospitalSerializer.hospitalDescription;
     self.images = hospitalSerializer.images;
+    self.latitude = hospitalSerializer.latitude;
+    self.longitude = hospitalSerializer.longitude;
+    self.street = hospitalSerializer.street;
     return self;
 }
 

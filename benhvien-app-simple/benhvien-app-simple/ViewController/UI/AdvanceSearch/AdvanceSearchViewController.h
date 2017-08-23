@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIView *districtView;
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *provinceDropDownTextField;
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *districtDropDownTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *provinceCaretDownImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *provinceCaretUpImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *districtCaretDownImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *districtCaretUpImageView;
 
 @end

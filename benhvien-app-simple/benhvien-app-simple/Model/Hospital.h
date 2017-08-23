@@ -18,6 +18,9 @@
 @property (nonatomic) NSString *phones;
 @property (nonatomic) NSString *hospitalDescription;
 @property (nonatomic) NSArray *images;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@property (nonatomic) NSString *street;
 
 - (id)initWithSerializer:(HospitalSerializer *)hospitalSerializer;
 - (NSMutableArray *)parseArrayFromSerializers:(NSArray *)serializers;

@@ -10,4 +10,9 @@
 
 @interface HospitalLocation : NSObject
 
+@property (nonatomic) double longitude;
+@property (nonatomic) double latitude;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *street;
+
 @end

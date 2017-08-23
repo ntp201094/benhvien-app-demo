@@ -40,7 +40,7 @@
                                             <action selector="finishHospitalSearching:" destination="n6Q-SR-1KS" eventType="touchUpInside" id="wqs-Bu-9JZ"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e76-GZ-UpS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e76-GZ-UpS">
                                         <rect key="frame" x="20" y="3" width="282" height="45"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -126,15 +126,24 @@
                                                     <constraint firstAttribute="height" constant="12" id="Sef-Pu-uDP"/>
                                                 </constraints>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-up-icon" translatesAutoresizingMaskIntoConstraints="NO" id="IRs-cr-yLk">
+                                                <rect key="frame" x="307" y="16" width="20" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="N6O-jh-J2m"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="IRs-cr-yLk" secondAttribute="bottom" constant="17" id="F3E-Aa-6Ef"/>
                                             <constraint firstItem="7G9-Tt-lRO" firstAttribute="top" secondItem="2k0-d3-Ut5" secondAttribute="top" constant="16" id="HKt-jt-LCu"/>
                                             <constraint firstAttribute="bottom" secondItem="7G9-Tt-lRO" secondAttribute="bottom" constant="17" id="Hu0-dB-paQ"/>
                                             <constraint firstAttribute="trailing" secondItem="DUQ-Ny-gZl" secondAttribute="trailing" id="QDd-8w-u26"/>
+                                            <constraint firstAttribute="trailing" secondItem="IRs-cr-yLk" secondAttribute="trailing" constant="8" id="Rca-LD-DXz"/>
                                             <constraint firstAttribute="height" constant="45" id="VRw-Ls-U5n"/>
                                             <constraint firstAttribute="bottom" secondItem="DUQ-Ny-gZl" secondAttribute="bottom" constant="8" id="edz-9A-CyM"/>
                                             <constraint firstItem="DUQ-Ny-gZl" firstAttribute="top" secondItem="2k0-d3-Ut5" secondAttribute="top" constant="7" id="gD9-iW-ZBz"/>
+                                            <constraint firstItem="IRs-cr-yLk" firstAttribute="top" secondItem="2k0-d3-Ut5" secondAttribute="top" constant="16" id="jbu-3S-WzW"/>
                                             <constraint firstAttribute="trailing" secondItem="7G9-Tt-lRO" secondAttribute="trailing" constant="8" id="jhc-Hm-CIA"/>
                                             <constraint firstItem="DUQ-Ny-gZl" firstAttribute="leading" secondItem="2k0-d3-Ut5" secondAttribute="leading" id="jhl-bD-QYa"/>
                                         </constraints>
@@ -154,13 +163,22 @@
                                                     <constraint firstAttribute="height" constant="12" id="zuc-FS-jeJ"/>
                                                 </constraints>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-up-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-Iq-HUH">
+                                                <rect key="frame" x="307" y="16" width="20" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="Z0o-Qj-O9a"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="AWH-3i-Q0X" firstAttribute="leading" secondItem="wtJ-7j-ZqI" secondAttribute="leading" id="49y-Es-kY1"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Fc-Iq-HUH" secondAttribute="trailing" constant="8" id="Byf-uO-ZHj"/>
+                                            <constraint firstItem="5Fc-Iq-HUH" firstAttribute="top" secondItem="wtJ-7j-ZqI" secondAttribute="top" constant="16" id="Lfc-hK-v5p"/>
                                             <constraint firstAttribute="bottom" secondItem="AWH-3i-Q0X" secondAttribute="bottom" constant="8" id="PKx-OZ-XiW"/>
                                             <constraint firstAttribute="bottom" secondItem="COg-Ek-9bt" secondAttribute="bottom" constant="17" id="Ups-tj-l3g"/>
                                             <constraint firstItem="AWH-3i-Q0X" firstAttribute="top" secondItem="wtJ-7j-ZqI" secondAttribute="top" constant="7" id="cUK-Tc-Zu7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Fc-Iq-HUH" secondAttribute="bottom" constant="17" id="eFD-je-psB"/>
                                             <constraint firstAttribute="trailing" secondItem="AWH-3i-Q0X" secondAttribute="trailing" id="f9v-nw-Xr7"/>
                                             <constraint firstAttribute="trailing" secondItem="COg-Ek-9bt" secondAttribute="trailing" constant="8" id="gl3-6m-39y"/>
                                             <constraint firstAttribute="height" constant="45" id="hk9-5m-a4i"/>
@@ -209,8 +227,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="districtCaretDownImageView" destination="COg-Ek-9bt" id="Gxr-sw-chS"/>
+                        <outlet property="districtCaretUpImageView" destination="5Fc-Iq-HUH" id="Qtf-vh-fcY"/>
                         <outlet property="districtDropDownTextField" destination="AWH-3i-Q0X" id="srQ-U1-0mR"/>
                         <outlet property="districtView" destination="wtJ-7j-ZqI" id="h0s-K5-prD"/>
+                        <outlet property="provinceCaretDownImageView" destination="7G9-Tt-lRO" id="rEc-4T-6uB"/>
+                        <outlet property="provinceCaretUpImageView" destination="IRs-cr-yLk" id="h8Y-bk-jdf"/>
                         <outlet property="provinceDropDownTextField" destination="DUQ-Ny-gZl" id="Ecx-Ae-IW4"/>
                         <outlet property="provinceView" destination="2k0-d3-Ut5" id="hIh-x4-gU8"/>
                     </connections>
@@ -325,7 +347,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-os-8wh" customClass="HLTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-os-8wh" customClass="HLTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
@@ -377,7 +399,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGj-He-2db" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pRG-u9-9w2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pRG-u9-9w2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,6 +420,7 @@
     </scenes>
     <resources>
         <image name="caret-down" width="20" height="12"/>
+        <image name="caret-up-icon" width="20" height="12"/>
         <image name="right-arrow" width="9" height="14"/>
         <image name="search-btn-icon" width="30" height="31"/>
     </resources>

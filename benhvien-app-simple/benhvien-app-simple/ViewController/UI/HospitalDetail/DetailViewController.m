@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupBackBarButtton];
+    [self setupDirectionBarButton];
     self.title = self.hostpital.name;
     [self setupTableViewLayout];
     [self reloadHospitalInfoById:self.hostpital.hospitalId];
@@ -36,6 +37,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)setupDirectionBarButton {
+    UIBarButtonItem *directionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(goToDirectionView)];
+    self.navigationItem.rightBarButtonItem = directionButton;
 }
 
 - (void)reloadHospitalInfoById:(NSString *)hospitalId {
@@ -85,6 +91,10 @@
     [datas addObject:descriptionModel];
     
     HospitalLocation *locationModel = [HospitalLocation new];
+    locationModel.latitude = hospital.latitude;
+    locationModel.longitude = hospital.longitude;
+    locationModel.name = hospital.name;
+    locationModel.street = hospital.street;
     [datas addObject:locationModel];
     
     return datas;
@@ -99,6 +109,10 @@
     [self.tableView registerCell:[PhoneTableViewCell class] forModel:[HospitalPhone class]];
     [self.tableView registerCell:[DescriptionTableViewCell class] forModel:[HospitalDescription class]];
     [self.tableView registerCell:[LocationTableViewCell class] forModel:[HospitalLocation class]];
+}
+
+- (void)goToDirectionView {
+    
 }
 
 @end

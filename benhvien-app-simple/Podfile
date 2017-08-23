@@ -10,5 +10,7 @@ target 'benhvien-app-simple' do
     pod 'KASlideShow'
     pod 'AFNetworking'
     pod 'MBProgressHUD'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
 end

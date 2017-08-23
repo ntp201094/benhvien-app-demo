@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTableViewCell.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface LocationTableViewCell : HLTableViewCell
+
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
 @end

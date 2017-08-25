@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 
 #define GoogleApiKey                                        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
@@ -23,7 +24,7 @@
     
     [GMSServices provideAPIKey:GoogleApiKey];
     [GMSPlacesClient provideAPIKey:GoogleApiKey];
-    
+    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
     return YES;
 }
 

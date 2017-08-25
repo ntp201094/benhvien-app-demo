@@ -12,5 +12,6 @@ target 'benhvien-app-simple' do
     pod 'MBProgressHUD'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'OCGoogleDirectionsAPI'
 
 end

@@ -338,7 +338,7 @@
         <!--Detail View Controller-->
         <scene sceneID="40F-dI-unW">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="eOm-J1-iJr" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" providesPresentationContextTransitionStyle="YES" id="eOm-J1-iJr" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dex-Wf-l9a"/>
                         <viewControllerLayoutGuide type="bottom" id="udS-ij-KnO"/>
@@ -393,6 +393,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ev7-GE-hCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3004" y="124.58770614692655"/>
+        </scene>
+        <!--Direction View Controller-->
+        <scene sceneID="taM-tV-OLk">
+            <objects>
+                <viewController storyboardIdentifier="DirectionViewController" id="oMT-N1-7OI" customClass="DirectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="inF-aF-hd2"/>
+                        <viewControllerLayoutGuide type="bottom" id="bV4-q8-3Jw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0mZ-tm-Gmb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wa-ds-FCV" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Wa-ds-FCV" secondAttribute="trailing" id="FHs-98-x20"/>
+                            <constraint firstItem="8Wa-ds-FCV" firstAttribute="leading" secondItem="0mZ-tm-Gmb" secondAttribute="leading" id="PLr-1p-P07"/>
+                            <constraint firstItem="8Wa-ds-FCV" firstAttribute="top" secondItem="0mZ-tm-Gmb" secondAttribute="top" id="fb1-3u-MBY"/>
+                            <constraint firstItem="bV4-q8-3Jw" firstAttribute="top" secondItem="8Wa-ds-FCV" secondAttribute="bottom" id="zka-gK-h6Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="8Wa-ds-FCV" id="nZP-Ku-Yyl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rop-oa-6cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3789.5999999999999" y="127.28635682158921"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="SNn-kT-O8v">

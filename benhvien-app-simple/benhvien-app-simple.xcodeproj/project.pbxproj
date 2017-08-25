@@ -29,6 +29,8 @@
 		5222ADE81F4B105200E65D3F /* HospitalPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 5222ADE71F4B105200E65D3F /* HospitalPhone.m */; };
 		5222ADEB1F4B106500E65D3F /* HospitalDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5222ADEA1F4B106500E65D3F /* HospitalDescription.m */; };
 		5222ADEE1F4B107600E65D3F /* HospitalLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5222ADED1F4B107600E65D3F /* HospitalLocation.m */; };
+		522DD2831F50482C000A196C /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522DD2821F50482C000A196C /* DirectionViewController.m */; };
+		522DD2861F505BE1000A196C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522DD2851F505BE1000A196C /* MapKit.framework */; };
 		523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */; };
 		523DC9C51F31F52200039835 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B31F31F52200039835 /* HomeViewController.m */; };
 		523DC9C61F31F52200039835 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B61F31F52200039835 /* DetailViewController.m */; };
@@ -95,6 +97,10 @@
 		5222ADEA1F4B106500E65D3F /* HospitalDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalDescription.m; sourceTree = "<group>"; };
 		5222ADEC1F4B107600E65D3F /* HospitalLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalLocation.h; sourceTree = "<group>"; };
 		5222ADED1F4B107600E65D3F /* HospitalLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalLocation.m; sourceTree = "<group>"; };
+		522DD2811F50482C000A196C /* DirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionViewController.h; sourceTree = "<group>"; };
+		522DD2821F50482C000A196C /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
+		522DD2841F50536A000A196C /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyLocation.gpx; sourceTree = "<group>"; };
+		522DD2851F505BE1000A196C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		523DC9AF1F31F52200039835 /* AdvanceSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceSearchViewController.h; sourceTree = "<group>"; };
 		523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		523DC9B21F31F52200039835 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522DD2861F505BE1000A196C /* MapKit.framework in Frameworks */,
 				E8587EB5DC6E42F3A8A26A41 /* Pods_benhvien_app_simple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +166,7 @@
 		37CA68E06726E701A1625237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				522DD2851F505BE1000A196C /* MapKit.framework */,
 				82CB3F7C591A4F53713EDDAF /* Pods_benhvien_app_simple.framework */,
 			);
 			name = Frameworks;
@@ -176,6 +184,15 @@
 				520B26111F34998F00137206 /* ApiResponse.m */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		522DD2801F504813000A196C /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				522DD2811F50482C000A196C /* DirectionViewController.h */,
+				522DD2821F50482C000A196C /* DirectionViewController.m */,
+			);
+			path = Direction;
 			sourceTree = "<group>";
 		};
 		523DC9AE1F31F52200039835 /* AdvanceSearch */ = {
@@ -282,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				5241C8711F2B5A4B00485790 /* main.m */,
+				522DD2841F50536A000A196C /* MyLocation.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,6 +338,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				522DD2801F504813000A196C /* Direction */,
 				523DC9AE1F31F52200039835 /* AdvanceSearch */,
 				523DC9B11F31F52200039835 /* Home */,
 				523DC9B41F31F52200039835 /* HospitalDetail */,
@@ -459,6 +478,11 @@
 					5241C86C1F2B5A4A00485790 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -596,6 +620,7 @@
 				5241C8931F2B5AF700485790 /* BaseViewController.m in Sources */,
 				5222ADCB1F4B02DE00E65D3F /* PhoneTableViewCell.m in Sources */,
 				5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */,
+				522DD2831F50482C000A196C /* DirectionViewController.m in Sources */,
 				5222ADDF1F4B102600E65D3F /* HospitalThumbImage.m in Sources */,
 				5222ADBC1F4B02A200E65D3F /* ThumbImageTableViewCell.m in Sources */,
 				529E375A1F2F5DD0004D114C /* Hospital.m in Sources */,

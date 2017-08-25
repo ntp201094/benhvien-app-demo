@@ -19,6 +19,7 @@
 #import "HospitalPhone.h"
 #import "HospitalDescription.h"
 #import "HospitalLocation.h"
+#import "DirectionViewController.h"
 
 @interface DetailViewController ()
 
@@ -55,6 +56,7 @@
                     HospitalSerializer *serializer = [[HospitalSerializer alloc] initWithDataObject:data];
                     Hospital *hospital = [[Hospital alloc] initWithSerializer:serializer];
                     [self.tableView addItems:[self getTableViewDataByHospital:hospital]];
+                    self.hostpital = hospital;
                 } else {
                     [self showAlertWithTitle:@"Loi" message:@"Khong tim thay du lieu"];
                 }
@@ -112,7 +114,9 @@
 }
 
 - (void)goToDirectionView {
-    
+    DirectionViewController *nextViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionViewController"];
+    nextViewController.hospital = self.hostpital;
+    [self showViewController:nextViewController sender:self];
 }
 
 @end

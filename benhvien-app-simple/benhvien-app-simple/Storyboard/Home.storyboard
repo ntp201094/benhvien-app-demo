@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XGj-He-2db">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XGj-He-2db">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -261,7 +262,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZmE-3C-tUh" id="rQC-LJ-ojP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tft-vY-aVe">
@@ -394,6 +395,86 @@
             </objects>
             <point key="canvasLocation" x="3004" y="124.58770614692655"/>
         </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="ggu-L3-JtT">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" id="NXl-zg-8uf" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xas-vi-905"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xhk-a2-Bba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smZ-6A-tct">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="GiZ-fv-pei">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crL-ap-u98">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemCell" id="E8n-9F-dcp" customClass="MenuItemTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E8n-9F-dcp" id="nHD-Up-FUN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìm kiếm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgc-3A-egc">
+                                                    <rect key="frame" x="70" y="19" width="285" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="search-menu-icon" translatesAutoresizingMaskIntoConstraints="NO" id="iLA-4S-U16">
+                                                    <rect key="frame" x="20" y="14" width="30" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="E2g-nB-LTV"/>
+                                                        <constraint firstAttribute="width" secondItem="iLA-4S-U16" secondAttribute="height" multiplier="30:31" id="jca-BY-Jzp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="kgc-3A-egc" firstAttribute="leading" secondItem="iLA-4S-U16" secondAttribute="trailing" constant="20" id="27W-AC-6RQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="iLA-4S-U16" secondAttribute="bottom" constant="14.5" id="4ki-c6-ZAp"/>
+                                                <constraint firstItem="iLA-4S-U16" firstAttribute="leading" secondItem="nHD-Up-FUN" secondAttribute="leading" constant="20" id="6xb-Hq-HHg"/>
+                                                <constraint firstAttribute="bottom" secondItem="kgc-3A-egc" secondAttribute="bottom" constant="19.5" id="KPF-xY-OLO"/>
+                                                <constraint firstAttribute="trailing" secondItem="kgc-3A-egc" secondAttribute="trailing" constant="20" id="Zng-8Q-AcQ"/>
+                                                <constraint firstItem="iLA-4S-U16" firstAttribute="top" secondItem="nHD-Up-FUN" secondAttribute="top" constant="14" id="ndQ-5S-Fkz"/>
+                                                <constraint firstItem="kgc-3A-egc" firstAttribute="top" secondItem="nHD-Up-FUN" secondAttribute="top" constant="19" id="pVV-TZ-BmZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="itemIconImageView" destination="iLA-4S-U16" id="WO2-a3-sPY"/>
+                                            <outlet property="itemNameLabel" destination="kgc-3A-egc" id="mnN-ip-ubz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GiZ-fv-pei" firstAttribute="top" secondItem="smZ-6A-tct" secondAttribute="top" id="0LR-Bj-vMh"/>
+                            <constraint firstItem="GiZ-fv-pei" firstAttribute="leading" secondItem="smZ-6A-tct" secondAttribute="leading" id="4bU-2g-x6Z"/>
+                            <constraint firstItem="crL-ap-u98" firstAttribute="leading" secondItem="smZ-6A-tct" secondAttribute="leading" id="EbU-5D-87b"/>
+                            <constraint firstItem="Xhk-a2-Bba" firstAttribute="top" secondItem="crL-ap-u98" secondAttribute="bottom" id="RZe-yO-3bz"/>
+                            <constraint firstAttribute="trailing" secondItem="GiZ-fv-pei" secondAttribute="trailing" id="TGq-it-nGC"/>
+                            <constraint firstItem="crL-ap-u98" firstAttribute="top" secondItem="xas-vi-905" secondAttribute="bottom" id="ZJm-Vg-Sss"/>
+                            <constraint firstAttribute="trailing" secondItem="crL-ap-u98" secondAttribute="trailing" id="aZR-8w-tgn"/>
+                            <constraint firstItem="Xhk-a2-Bba" firstAttribute="top" secondItem="GiZ-fv-pei" secondAttribute="bottom" id="d1u-3z-P0w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="crL-ap-u98" id="epJ-hN-lQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oL-vG-1eL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000.8000000000002" y="788.45577211394311"/>
+        </scene>
         <!--Direction View Controller-->
         <scene sceneID="taM-tV-OLk">
             <objects>
@@ -432,7 +513,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGj-He-2db" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pRG-u9-9w2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pRG-u9-9w2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -456,5 +537,7 @@
         <image name="caret-up-icon" width="20" height="12"/>
         <image name="right-arrow" width="9" height="14"/>
         <image name="search-btn-icon" width="30" height="31"/>
+        <image name="search-menu-icon" width="30" height="31"/>
+        <image name="side-menu-bg" width="375" height="667"/>
     </resources>
 </document>

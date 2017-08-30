@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F5E1F55054900DD077D /* SideMenuViewController.m */; };
+		48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F621F55060E00DD077D /* MenuItemTableViewCell.m */; };
+		48708F671F55625B00DD077D /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F661F55625B00DD077D /* ContainerViewController.m */; };
+		48708F691F5564A300DD077D /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48708F681F5564A300DD077D /* Container.storyboard */; };
 		520B260C1F34997300137206 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260B1F34997300137206 /* ApiManager.m */; };
 		520B260F1F34998000137206 /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260E1F34998000137206 /* ApiRequest.m */; };
 		520B26121F34998F00137206 /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B26111F34998F00137206 /* ApiResponse.m */; };
@@ -58,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48708F5D1F55054900DD077D /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		48708F5E1F55054900DD077D /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		48708F611F55060E00DD077D /* MenuItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemTableViewCell.h; sourceTree = "<group>"; };
+		48708F621F55060E00DD077D /* MenuItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemTableViewCell.m; sourceTree = "<group>"; };
+		48708F651F55625B00DD077D /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		48708F661F55625B00DD077D /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		48708F681F5564A300DD077D /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
 		520B26091F34982300137206 /* ApiEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
 		520B260A1F34997300137206 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		520B260B1F34997300137206 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
@@ -170,6 +181,34 @@
 				82CB3F7C591A4F53713EDDAF /* Pods_benhvien_app_simple.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48708F5C1F55052C00DD077D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				48708F5D1F55054900DD077D /* SideMenuViewController.h */,
+				48708F5E1F55054900DD077D /* SideMenuViewController.m */,
+				48708F601F5505F600DD077D /* UITableViewCell */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		48708F601F5505F600DD077D /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				48708F611F55060E00DD077D /* MenuItemTableViewCell.h */,
+				48708F621F55060E00DD077D /* MenuItemTableViewCell.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		48708F641F55623F00DD077D /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				48708F651F55625B00DD077D /* ContainerViewController.h */,
+				48708F661F55625B00DD077D /* ContainerViewController.m */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 		520B26081F34981100137206 /* Api */ = {
@@ -338,6 +377,8 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				48708F641F55623F00DD077D /* Container */,
+				48708F5C1F55052C00DD077D /* SideMenu */,
 				522DD2801F504813000A196C /* Direction */,
 				523DC9AE1F31F52200039835 /* AdvanceSearch */,
 				523DC9B11F31F52200039835 /* Home */,
@@ -351,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				523DC9CE1F32001800039835 /* Home.storyboard */,
+				48708F681F5564A300DD077D /* Container.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -513,6 +555,7 @@
 				523DC9CF1F32001800039835 /* Home.storyboard in Resources */,
 				5222ADD61F4B030200E65D3F /* LocationTableViewCell.xib in Resources */,
 				5222ADBD1F4B02A200E65D3F /* ThumbImageTableViewCell.xib in Resources */,
+				48708F691F5564A300DD077D /* Container.storyboard in Resources */,
 				5222ADCC1F4B02DE00E65D3F /* PhoneTableViewCell.xib in Resources */,
 				5222ADD11F4B02EF00E65D3F /* DescriptionTableViewCell.xib in Resources */,
 				5241C87D1F2B5A4B00485790 /* Assets.xcassets in Resources */,
@@ -608,12 +651,14 @@
 				5241C8991F2B5B2900485790 /* BaseTabBarController.m in Sources */,
 				5241C8961F2B5B1100485790 /* BaseNavigationController.m in Sources */,
 				520B260C1F34997300137206 /* ApiManager.m in Sources */,
+				48708F671F55625B00DD077D /* ContainerViewController.m in Sources */,
 				523DC9C51F31F52200039835 /* HomeViewController.m in Sources */,
 				523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */,
 				5222ADC11F4B02B800E65D3F /* NameTableViewCell.m in Sources */,
 				5222ADE21F4B103400E65D3F /* HospitalName.m in Sources */,
 				520B260F1F34998000137206 /* ApiRequest.m in Sources */,
 				523DC9CD1F31F52200039835 /* SearchResultViewController.m in Sources */,
+				48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */,
 				5241C88A1F2B5AA800485790 /* AppDelegate.m in Sources */,
 				5222ADC61F4B02CF00E65D3F /* AddressTableViewCell.m in Sources */,
 				529E37671F2F6C52004D114C /* HLTableViewSection.m in Sources */,
@@ -621,6 +666,7 @@
 				5222ADCB1F4B02DE00E65D3F /* PhoneTableViewCell.m in Sources */,
 				5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */,
 				522DD2831F50482C000A196C /* DirectionViewController.m in Sources */,
+				48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */,
 				5222ADDF1F4B102600E65D3F /* HospitalThumbImage.m in Sources */,
 				5222ADBC1F4B02A200E65D3F /* ThumbImageTableViewCell.m in Sources */,
 				529E375A1F2F5DD0004D114C /* Hospital.m in Sources */,

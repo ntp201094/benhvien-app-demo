@@ -28,10 +28,6 @@
     self.searchTextField.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)validateHospitalName:(NSString *)hospitalName completion:(void (^)(BOOL isValidate, NSString *message))completion {
     if(!hospitalName || hospitalName.length == 0) {
         completion(NO, @"Ban phai nhap ten benh vien");
@@ -74,7 +70,6 @@
                                      } else {
                                          [self showAlertWithTitle:@"Loi khong tim thay" message:@"Khong tim thay hospital"];
                                      }
-                                     [self hideHUD];
                                  } else {
                                      NSLog(@"%@", [error localizedDescription]);
                                  }
@@ -82,6 +77,7 @@
         } else {
             [self showAlertWithTitle:@"Loi tim kiem" message:message];
         }
+      [self hideHUD];
     }];
 }
 

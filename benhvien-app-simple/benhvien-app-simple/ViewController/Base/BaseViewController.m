@@ -16,6 +16,11 @@
 
 @implementation BaseViewController
 
+- (instancetype)init {
+  self.isMenuDisplaying = false;
+  return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -25,7 +30,7 @@
 }
 
 - (void)setupMenuBarButton {
-    UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(showSideMenuBar)];
     self.navigationItem.leftBarButtonItem = menuBarButton;
 }
 
@@ -58,6 +63,21 @@
                           destructiveButtonTitle:nil
                                otherButtonTitles:nil
                                         tapBlock:nil];
+}
+
+- (void)showSideMenuBar {
+  if (self.delegate) {
+    if (self.isMenuDisplaying) {
+      [self.delegate closeSideMenu:^{
+        self.view.userInteractionEnabled = YES;
+      }];
+    } else {
+      [self.delegate showSideMenu:^{
+        self.view.userInteractionEnabled = NO;
+      }];
+    }
+    self.isMenuDisplaying = !self.isMenuDisplaying;
+  }
 }
 
 @end

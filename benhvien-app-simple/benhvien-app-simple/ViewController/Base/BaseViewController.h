@@ -9,7 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "ApiRequest.h"
 
+@protocol BaseViewControllerDelegate <NSObject>
+
+@required
+- (void)showSideMenu:(void (^)())completion;
+- (void)closeSideMenu:(void (^)())completion;
+
+@end
+
 @interface BaseViewController : UIViewController
+
+@property (nonatomic, assign) id<BaseViewControllerDelegate> delegate;
+@property (nonatomic, assign) BOOL isMenuDisplaying;
 
 - (void)setupMenuBarButton;
 - (void)setupBackBarButtton;

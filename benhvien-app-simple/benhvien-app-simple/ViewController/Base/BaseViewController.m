@@ -66,18 +66,7 @@
 }
 
 - (void)showSideMenuBar {
-  if (self.delegate) {
-    if (self.isMenuDisplaying) {
-      [self.delegate closeSideMenu:^{
-        self.view.userInteractionEnabled = YES;
-      }];
-    } else {
-      [self.delegate showSideMenu:^{
-        self.view.userInteractionEnabled = NO;
-      }];
-    }
-    self.isMenuDisplaying = !self.isMenuDisplaying;
-  }
+  
 }
 
 @end

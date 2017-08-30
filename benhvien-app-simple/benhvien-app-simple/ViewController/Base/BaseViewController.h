@@ -27,4 +27,5 @@
 - (void)showHUD;
 - (void)hideHUD;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+- (void)showSideMenuBar;
 @end

@@ -35,6 +35,7 @@
 		5222ADEE1F4B107600E65D3F /* HospitalLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5222ADED1F4B107600E65D3F /* HospitalLocation.m */; };
 		522DD2831F50482C000A196C /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522DD2821F50482C000A196C /* DirectionViewController.m */; };
 		522DD2861F505BE1000A196C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522DD2851F505BE1000A196C /* MapKit.framework */; };
+		52387AC31F56FCB4002EC77C /* AppInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52387AC21F56FCB4002EC77C /* AppInformationViewController.m */; };
 		523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */; };
 		523DC9C51F31F52200039835 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B31F31F52200039835 /* HomeViewController.m */; };
 		523DC9C61F31F52200039835 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DC9B61F31F52200039835 /* DetailViewController.m */; };
@@ -112,6 +113,8 @@
 		522DD2821F50482C000A196C /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
 		522DD2841F50536A000A196C /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyLocation.gpx; sourceTree = "<group>"; };
 		522DD2851F505BE1000A196C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		52387AC11F56FCB4002EC77C /* AppInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformationViewController.h; sourceTree = "<group>"; };
+		52387AC21F56FCB4002EC77C /* AppInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformationViewController.m; sourceTree = "<group>"; };
 		523DC9AF1F31F52200039835 /* AdvanceSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceSearchViewController.h; sourceTree = "<group>"; };
 		523DC9B01F31F52200039835 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		523DC9B21F31F52200039835 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -232,6 +235,15 @@
 				522DD2821F50482C000A196C /* DirectionViewController.m */,
 			);
 			path = Direction;
+			sourceTree = "<group>";
+		};
+		52387AC01F56FC92002EC77C /* AppInformation */ = {
+			isa = PBXGroup;
+			children = (
+				52387AC11F56FCB4002EC77C /* AppInformationViewController.h */,
+				52387AC21F56FCB4002EC77C /* AppInformationViewController.m */,
+			);
+			path = AppInformation;
 			sourceTree = "<group>";
 		};
 		523DC9AE1F31F52200039835 /* AdvanceSearch */ = {
@@ -377,6 +389,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				52387AC01F56FC92002EC77C /* AppInformation */,
 				48708F641F55623F00DD077D /* Container */,
 				48708F5C1F55052C00DD077D /* SideMenu */,
 				522DD2801F504813000A196C /* Direction */,
@@ -666,6 +679,7 @@
 				5222ADCB1F4B02DE00E65D3F /* PhoneTableViewCell.m in Sources */,
 				5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */,
 				522DD2831F50482C000A196C /* DirectionViewController.m in Sources */,
+				52387AC31F56FCB4002EC77C /* AppInformationViewController.m in Sources */,
 				48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */,
 				5222ADDF1F4B102600E65D3F /* HospitalThumbImage.m in Sources */,
 				5222ADBC1F4B02A200E65D3F /* ThumbImageTableViewCell.m in Sources */,

@@ -40,15 +40,6 @@
     AdvanceSearchViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AdvanceSearchViewController"];
     
     [self.navigationController showViewController:vc sender:self];
-//    [self showHUD];
-//    [ApiRequest loginWithEmail:@"haole@gmail.com" password:@"111111" completionBlock:^(ApiResponse *response, NSError *error) {
-//        if(!error) {
-//            NSLog(@"%@", response.data);
-//        } else {
-//            NSLog(@"%@", [error localizedDescription]);
-//        }
-//        [self hideHUD];
-//    }];
     
 }
 - (IBAction)finishHospitalSearching:(id)sender {
@@ -79,6 +70,33 @@
         }
       [self hideHUD];
     }];
+}
+
+- (void)showSideMenuBar {
+    if (self.delegate) {
+        if (self.isMenuDisplaying) {
+            [self.delegate closeSideMenu:^{
+                self.searchTextField.userInteractionEnabled = YES;
+                self.advancedSearchButton.userInteractionEnabled = YES;
+            }];
+        } else {
+            [self.delegate showSideMenu:^{
+                self.searchTextField.userInteractionEnabled = NO;
+                self.advancedSearchButton.userInteractionEnabled = NO;
+            }];
+        }
+        self.isMenuDisplaying = !self.isMenuDisplaying;
+    }
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.isMenuDisplaying) {
+        [self.delegate closeSideMenu:^{
+            self.searchTextField.userInteractionEnabled = YES;
+            self.advancedSearchButton.userInteractionEnabled = YES;
+            self.isMenuDisplaying = NO;
+        }];
+    }
 }
 
 @end

@@ -28,6 +28,8 @@ typedef enum : NSUInteger {
   [super viewDidLoad];
   self.tableView.dataSource = self;
   self.tableView.delegate = self;
+    [self.tableView setTableFooterView:[UIView new]];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,18 +58,21 @@ typedef enum : NSUInteger {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  switch (indexPath.row) {
-    case SearchIndex:{
-      
-      break;
+    if (self.delegate) {
+        switch (indexPath.row) {
+            case SearchIndex:{
+                
+                break;
+            }
+            case InformationIndex:{
+                
+                break;
+            }
+            default:
+                break;
+        }
     }
-    case InformationIndex:{
-      
-      break;
-    }
-    default:
-      break;
-  }
 }
+
 
 @end

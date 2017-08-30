@@ -9,6 +9,7 @@
 #import "ContainerViewController.h"
 #import "SideMenuViewController.h"
 #import "BaseNavigationController.h"
+#import "AppInformationViewController.h"
 
 #define CORNER_RADIUS 4
 #define SLIDE_TIMING .25
@@ -62,6 +63,7 @@
 - (UIView *)getSideMenuView {
   if (self.sideMenuViewController == nil) {
     self.sideMenuViewController = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateViewControllerWithIdentifier:@"SideMenuViewController"];
+      self.sideMenuViewController.delegate = self;
     [self addChildViewController:self.sideMenuViewController];
     [self.view addSubview:self.sideMenuViewController.view];
     [self.sideMenuViewController didMoveToParentViewController:self];

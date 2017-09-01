@@ -29,10 +29,35 @@
   self.tabBar.hidden = true;
 }
 
+// MARK: Setup
+
 - (void)setupContainerViewDelegate {
   self.homeController.delegate = self;
   self.appInfoController.delegate = self;
 }
+
+// MARK: Private methods
+
+- (UIView *)getSideMenuView {
+    if (self.sideMenuViewController == nil) {
+        self.sideMenuViewController = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateViewControllerWithIdentifier:@"SideMenuViewController"];
+        self.sideMenuViewController.delegate = self;
+        self.window = [[[UIApplication sharedApplication] delegate] window];
+        [self.window addSubview:self.sideMenuViewController.view];
+    }
+    
+    UIView *view = self.sideMenuViewController.view;
+    return view;
+}
+
+- (void)resetContainerView {
+    if (self.sideMenuViewController != nil) {
+        [self.sideMenuViewController.view removeFromSuperview];
+        self.sideMenuViewController = nil;
+    }
+}
+
+// MARK: BaseViewControllerDelegate methods
 
 - (void)showSideMenu:(void (^)())completion {
   UIView *childView = [self getSideMenuView];
@@ -59,35 +84,16 @@
   }];
 }
 
-- (UIView *)getSideMenuView {
-  if (self.sideMenuViewController == nil) {
-    self.sideMenuViewController = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateViewControllerWithIdentifier:@"SideMenuViewController"];
-    self.sideMenuViewController.delegate = self;
-    self.window = [[[UIApplication sharedApplication] delegate] window];
-    [self.window addSubview:self.sideMenuViewController.view];
-  }
-  
-  UIView *view = self.sideMenuViewController.view;
-  return view;
-}
-
-- (void)resetContainerView {
-  if (self.sideMenuViewController != nil) {
-    [self.sideMenuViewController.view removeFromSuperview];
-    self.sideMenuViewController = nil;
-  }
-}
-
 - (void)moveToTabWithIndex:(NSInteger)index completion:(void (^)())completion {
-  [self closeSideMenu:nil];
-  self.homeController.isMenuDisplaying = NO;
-  self.homeController.searchTextField.userInteractionEnabled = YES;
-  self.homeController.advancedSearchButton.userInteractionEnabled = YES;
-  self.appInfoController.isMenuDisplaying = NO;
-  self.selectedIndex = index;
-  if (completion) {
-    completion();
-  }
+    [self closeSideMenu:nil];
+    self.homeController.isMenuDisplaying = NO;
+    self.homeController.searchTextField.userInteractionEnabled = YES;
+    self.homeController.advancedSearchButton.userInteractionEnabled = YES;
+    self.appInfoController.isMenuDisplaying = NO;
+    self.selectedIndex = index;
+    if (completion) {
+        completion();
+    }
 }
 
 @end

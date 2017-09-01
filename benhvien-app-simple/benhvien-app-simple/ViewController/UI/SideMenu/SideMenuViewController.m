@@ -29,8 +29,10 @@ typedef enum : NSUInteger {
   self.tableView.dataSource = self;
   self.tableView.delegate = self;
     [self.tableView setTableFooterView:[UIView new]];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    self.tableView.scrollEnabled = NO;
 }
+
+// MARK: UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return 2;
@@ -56,6 +58,8 @@ typedef enum : NSUInteger {
   
   return cell;
 }
+
+// MARK: UITableViewDelegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.delegate) {

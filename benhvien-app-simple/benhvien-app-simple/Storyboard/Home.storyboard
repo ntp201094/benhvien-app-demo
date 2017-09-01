@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-m6-xP2" userLabel="Search Input View">
-                                <rect key="frame" x="0.0" y="124" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-yW-o8B">
                                         <rect key="frame" x="310" y="3" width="45" height="45"/>
@@ -60,7 +60,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-ay-cHo">
-                                <rect key="frame" x="20" y="234" width="335" height="45"/>
+                                <rect key="frame" x="20" y="190" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.46274509803921571" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="jCR-eo-9UB"/>
@@ -264,7 +264,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZmE-3C-tUh" id="rQC-LJ-ojP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tft-vY-aVe">
@@ -426,7 +426,7 @@
                                     <constraint firstAttribute="height" constant="1" id="J4p-RD-hef"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crL-ap-u98">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crL-ap-u98">
                                 <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -434,7 +434,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E8n-9F-dcp" id="nHD-Up-FUN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìm kiếm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgc-3A-egc">
@@ -514,7 +514,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="HnQ-pI-dN9"/>
                                 </constraints>
-                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến mệt bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.  1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam. 2) Chức năng tìm kiếm bệnh viện dễ sử dụng và hiệu quả cao. 3) Hiển thị thông tin chi tiết của các cơ sở khám chữa bệnh. 4) Hiển thị đường đi một cách rõ ràng, giúp bạn đến các cơ sở khám chữa bệnh một cách nhanh nhất. 5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thể đóng góp bằng cách thêm vào các bệnh viện mới.</mutableString>
+                                <string key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến mệt bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.  1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam. 2) Chức năng tìm kiếm bệnh viện dễ sử dụng và hiệu quả cao. 3) Hiển thị thông tin chi tiết của các cơ sở khám chữa bệnh. 4) Hiển thị đường đi một cách rõ ràng, giúp bạn đến các cơ sở khám chữa bệnh một cách nhanh nhất. 5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thể đóng góp bằng cách thêm vào các bệnh viện mới.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.41179230809211731" green="0.4194968044757843" blue="0.43535622954368591" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -564,29 +564,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rop-oa-6cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3789.5999999999999" y="127.28635682158921"/>
-        </scene>
-        <!--Base Navigation Controller-->
-        <scene sceneID="SNn-kT-O8v">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8M1-ge-kTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGj-He-2db" customClass="BaseNavigationController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pRG-u9-9w2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.7725490196" green="0.047058823530000002" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="n6Q-SR-1KS" kind="relationship" relationship="rootViewController" id="eKc-Qz-DKv"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-252" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>

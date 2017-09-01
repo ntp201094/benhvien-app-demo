@@ -25,10 +25,6 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)setupMenuBarButton {
     UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(showSideMenuBar)];
     self.navigationItem.leftBarButtonItem = menuBarButton;
@@ -65,6 +61,7 @@
                                         tapBlock:nil];
 }
 
+// Overriding from child
 - (void)showSideMenuBar {
   
 }

@@ -90,7 +90,9 @@
 }
 
 - (void)textField:(IQDropDownTextField *)textField didSelectItem:(NSString *)item {
-    [self reloadDistrictDropDownTextFieldWithCity:self.citySerializers[textField.selectedRow]];
+    if (textField == self.provinceDropDownTextField) {
+        [self reloadDistrictDropDownTextFieldWithCity:self.citySerializers[textField.selectedRow]];
+    }
 }
 
 - (IBAction)searchHospital:(id)sender {

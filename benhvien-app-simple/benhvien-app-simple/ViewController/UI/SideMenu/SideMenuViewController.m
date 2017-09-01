@@ -63,18 +63,7 @@ typedef enum : NSUInteger {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.delegate) {
-        switch (indexPath.row) {
-            case SearchIndex:{
-              [self.delegate moveToTabWithIndex:SearchIndex completion:nil];
-                break;
-            }
-            case InformationIndex:{
-                [self.delegate moveToTabWithIndex:InformationIndex completion:nil];
-                break;
-            }
-            default:
-                break;
-        }
+        [self.delegate moveToTabWithIndex:indexPath.row completion:nil];
     }
 }
 

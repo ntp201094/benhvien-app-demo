@@ -14,6 +14,7 @@
 @required
 - (void)showSideMenu:(void (^)())completion;
 - (void)closeSideMenu:(void (^)())completion;
+- (void)moveToTabWithIndex:(NSInteger)index completion:(void (^)())completion;
 
 @end
 

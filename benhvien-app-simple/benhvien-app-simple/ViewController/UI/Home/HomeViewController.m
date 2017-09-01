@@ -26,6 +26,7 @@
     self.searchTextField.layer.borderColor = [[UIColor grayColor] CGColor];
     self.searchTextField.layer.cornerRadius = 4.0;
     self.searchTextField.backgroundColor = [UIColor whiteColor];
+  self.title = @"Tìm kiếm";
 }
 
 - (void)validateHospitalName:(NSString *)hospitalName completion:(void (^)(BOOL isValidate, NSString *message))completion {
@@ -73,6 +74,9 @@
 }
 
 - (void)showSideMenuBar {
+  if (self.searchTextField.isEditing) {
+    [self.searchTextField resignFirstResponder];
+  }
     if (self.delegate) {
         if (self.isMenuDisplaying) {
             [self.delegate closeSideMenu:^{

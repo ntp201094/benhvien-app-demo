@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton *advancedSearchButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchByNameButton;
 
 @end

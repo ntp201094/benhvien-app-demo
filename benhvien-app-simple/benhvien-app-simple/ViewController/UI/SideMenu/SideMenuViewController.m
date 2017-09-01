@@ -61,11 +61,11 @@ typedef enum : NSUInteger {
     if (self.delegate) {
         switch (indexPath.row) {
             case SearchIndex:{
-                
+              [self.delegate moveToTabWithIndex:SearchIndex completion:nil];
                 break;
             }
             case InformationIndex:{
-                
+                [self.delegate moveToTabWithIndex:InformationIndex completion:nil];
                 break;
             }
             default:

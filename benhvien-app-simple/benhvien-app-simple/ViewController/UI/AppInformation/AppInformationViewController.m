@@ -21,6 +21,8 @@
   [self setupMenuBarButton];
 }
 
+#pragma mark - BaseViewControllerDelegate
+
 - (void)showSideMenuBar {
   if (self.delegate) {
     if (self.isMenuDisplaying) {

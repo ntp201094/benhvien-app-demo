@@ -61,7 +61,7 @@
     }];
 }
 
-// MARK: CLLocationManagerDelegate
+#pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
@@ -78,7 +78,6 @@
     
     CLLocation *location = locations.firstObject;
     
-//    _mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:15.0];
     _mapView.camera = [GMSCameraPosition cameraWithLatitude:_hospital.latitude longitude:_hospital.longitude zoom:15.0];
     
     [_locationManager stopUpdatingLocation];

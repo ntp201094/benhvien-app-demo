@@ -29,7 +29,7 @@
   self.tabBar.hidden = true;
 }
 
-// MARK: Setup
+#pragma mark - Setup
 
 - (void)setupContainerViewDelegate {
   self.homeController.delegate = self;
@@ -57,7 +57,7 @@
     }
 }
 
-// MARK: BaseViewControllerDelegate methods
+#pragma mark - BaseViewControllerDelegate methods
 
 - (void)showSideMenu:(void (^)())completion {
   UIView *childView = [self getSideMenuView];

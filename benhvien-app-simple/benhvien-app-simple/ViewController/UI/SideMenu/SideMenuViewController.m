@@ -32,7 +32,7 @@ typedef enum : NSUInteger {
     self.tableView.scrollEnabled = NO;
 }
 
-// MARK: UITableViewDataSource methods
+#pragma mark - UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return 2;
@@ -59,7 +59,7 @@ typedef enum : NSUInteger {
   return cell;
 }
 
-// MARK: UITableViewDelegate methods
+#pragma mark - UITableViewDelegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.delegate) {

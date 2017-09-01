@@ -74,9 +74,7 @@
 }
 
 - (void)showSideMenuBar {
-  if (self.searchTextField.isEditing) {
-    [self.searchTextField resignFirstResponder];
-  }
+    [self.searchTextField endEditing:NO];
     if (self.delegate) {
         if (self.isMenuDisplaying) {
             [self.delegate closeSideMenu:^{

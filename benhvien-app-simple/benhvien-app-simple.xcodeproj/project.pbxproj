@@ -53,6 +53,9 @@
 		5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8CD1F2B684D00485790 /* UIViewController+Storyboard.m */; };
 		524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */; };
 		5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5250653C1F41D0B60011B517 /* CitySerializer.m */; };
+		526DBB5A1F6027D700BE29A5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB591F6027D700BE29A5 /* LoginViewController.m */; };
+		526DBB5E1F60286A00BE29A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526DBB5D1F60286A00BE29A5 /* Login.storyboard */; };
+		526DBB611F602CD300BE29A5 /* LoginEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB601F602CD300BE29A5 /* LoginEmailViewController.m */; };
 		529E375A1F2F5DD0004D114C /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37591F2F5DD0004D114C /* Hospital.m */; };
 		529E37651F2F6C52004D114C /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37601F2F6C52004D114C /* HLTableView.m */; };
 		529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 529E37621F2F6C52004D114C /* HLTableViewCell.m */; };
@@ -146,6 +149,11 @@
 		524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSerializer.m; sourceTree = "<group>"; };
 		5250653B1F41D0B60011B517 /* CitySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySerializer.h; sourceTree = "<group>"; };
 		5250653C1F41D0B60011B517 /* CitySerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySerializer.m; sourceTree = "<group>"; };
+		526DBB581F6027D700BE29A5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		526DBB591F6027D700BE29A5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		526DBB5D1F60286A00BE29A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		526DBB5F1F602CD300BE29A5 /* LoginEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEmailViewController.h; sourceTree = "<group>"; };
+		526DBB601F602CD300BE29A5 /* LoginEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEmailViewController.m; sourceTree = "<group>"; };
 		529E37581F2F5DD0004D114C /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
 		529E37591F2F5DD0004D114C /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
 		529E375F1F2F6C52004D114C /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
@@ -375,6 +383,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				526DBB571F6027D700BE29A5 /* Login */,
 				52387AC01F56FC92002EC77C /* AppInformation */,
 				48708F5C1F55052C00DD077D /* SideMenu */,
 				522DD2801F504813000A196C /* Direction */,
@@ -390,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				523DC9CE1F32001800039835 /* Home.storyboard */,
+				526DBB5D1F60286A00BE29A5 /* Login.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -437,6 +447,17 @@
 				5250653C1F41D0B60011B517 /* CitySerializer.m */,
 			);
 			path = Serializers;
+			sourceTree = "<group>";
+		};
+		526DBB571F6027D700BE29A5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				526DBB581F6027D700BE29A5 /* LoginViewController.h */,
+				526DBB591F6027D700BE29A5 /* LoginViewController.m */,
+				526DBB5F1F602CD300BE29A5 /* LoginEmailViewController.h */,
+				526DBB601F602CD300BE29A5 /* LoginEmailViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		529E37561F2F5D99004D114C /* Model */ = {
@@ -556,6 +577,7 @@
 				5222ADD11F4B02EF00E65D3F /* DescriptionTableViewCell.xib in Resources */,
 				5241C87D1F2B5A4B00485790 /* Assets.xcassets in Resources */,
 				5222ADC71F4B02CF00E65D3F /* AddressTableViewCell.xib in Resources */,
+				526DBB5E1F60286A00BE29A5 /* Login.storyboard in Resources */,
 				5222ADC21F4B02B800E65D3F /* NameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5241C8D01F2B684D00485790 /* UITextField+Padding.m in Sources */,
+				526DBB611F602CD300BE29A5 /* LoginEmailViewController.m in Sources */,
 				520B26121F34998F00137206 /* ApiResponse.m in Sources */,
 				5222ADEE1F4B107600E65D3F /* HospitalLocation.m in Sources */,
 				529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */,
@@ -658,6 +681,7 @@
 				5222ADC11F4B02B800E65D3F /* NameTableViewCell.m in Sources */,
 				5222ADE21F4B103400E65D3F /* HospitalName.m in Sources */,
 				520B260F1F34998000137206 /* ApiRequest.m in Sources */,
+				526DBB5A1F6027D700BE29A5 /* LoginViewController.m in Sources */,
 				523DC9CD1F31F52200039835 /* SearchResultViewController.m in Sources */,
 				48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */,
 				5241C88A1F2B5AA800485790 /* AppDelegate.m in Sources */,

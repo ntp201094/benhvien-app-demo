@@ -32,7 +32,7 @@
     [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
   
   [self setupApplicationTheme];
-  [self setupHomeScreen];
+//  [self setupHomeScreen];
   
     return YES;
 }

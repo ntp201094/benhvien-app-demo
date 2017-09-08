@@ -20,12 +20,12 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupMenuBarButton];
-    self.searchTextField.layer.borderWidth = 0.5f;
-    self.searchTextField.layer.borderColor = [[UIColor grayColor] CGColor];
-    self.searchTextField.layer.cornerRadius = 4.0;
-    self.searchTextField.backgroundColor = [UIColor whiteColor];
+  [super viewDidLoad];
+  [self setupMenuBarButton];
+  self.searchTextField.layer.borderWidth = 0.5f;
+  self.searchTextField.layer.borderColor = [[UIColor grayColor] CGColor];
+  self.searchTextField.layer.cornerRadius = 4.0;
+  self.searchTextField.backgroundColor = [UIColor whiteColor];
   self.title = @"Tìm kiếm";
 }
 

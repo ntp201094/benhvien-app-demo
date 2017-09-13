@@ -80,7 +80,7 @@ typedef enum : NSUInteger {
       break;
     }
     case REGISTER:{
-      
+      [self registerUser];
       break;
     }
       
@@ -102,7 +102,65 @@ typedef enum : NSUInteger {
 }
 
 - (void)registerUser {
+  NSString *email = self.signUpEmailTextField.text;
+  NSString *fullName = self.signUpFullNameTextField.text;
+  NSString *password = self.signUpPasswordTextField.text;
+  NSString *city = self.signUpCityTextField.text;
+  [self validateEmail:email fullName:fullName password:password city:city completion:^(NSString *message, BOOL isValid) {
+    if (isValid) {
+      [self registerUserWithEmail:email fullName:fullName password:password city:city];
+    } else {
+      [self showAlertWithTitle:@"Lỗi" message:message];
+    }
+  }];
+}
+
+- (void)validateEmail:(NSString *)email fullName:(NSString *)fullName password:(NSString *)password city:(NSString *)city completion:(void (^) (NSString *message, BOOL isValid))completion {
+  if (!email || email.length == 0) {
+    completion(@"Bạn phải nhập email!", NO);
+    return;
+  }
+  if (!fullName || fullName.length == 0) {
+    completion(@"Bạn phải nhập name!", NO);
+    return;
+  }
+  if (!password || password.length == 0) {
+    completion(@"Bạn phải nhập password!", NO);
+    return;
+  }
+  if (password.length < 6) {
+    completion(@"Mật khẩu phải có ít nhất 6 kí tự", false);
+    return;
+  }
   
+  if (password.length > 10) {
+    completion(@"Mật khẩu tối đa 10 kí tự", false);
+    return;
+  }
+  if (!city || city.length == 0) {
+    completion(@"Bạn phải nhập city!", NO);
+    return;
+  }
+  
+  completion(@"", YES);
+  
+}
+
+- (void)registerUserWithEmail:(NSString *)email fullName:(NSString *)fullName password:(NSString *)password city:(NSString *)city {
+  [self showHUD];
+  [ApiRequest registerUserByEmail:email fullname:fullName password:password city:city completionBlock:^(ApiResponse *response, NSError *error) {
+    [self hideHUD];
+    if (!error) {
+      if (response.success) {
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [app setupHomeScreen];
+      } else {
+        [self showAlertWithTitle:@"Lỗi" message:response.message];
+      }
+    } else {
+      NSLog(@"%@", [error localizedDescription]);
+    }
+  }];
 }
 
 - (void)validateEmail:(NSString *)email password:(NSString *)password completion:(void (^)(NSString *message, BOOL isValid))completion {
@@ -146,6 +204,7 @@ typedef enum : NSUInteger {
 
 - (void)displaySignInView {
   self.title = @"Đăng nhập";
+  self.currentScreen = LOGIN;
   self.signInView.hidden = false;
   self.signUpView.hidden = true;
   [self resetSignUpViewInput];
@@ -153,6 +212,7 @@ typedef enum : NSUInteger {
 
 - (void)displaySignUpView {
   self.title = @"Đăng ký";
+  self.currentScreen = REGISTER;
   self.signUpView.hidden = false;
   self.signInView.hidden = true;
   [self resetSignInViewInput];
@@ -189,8 +249,16 @@ typedef enum : NSUInteger {
 
 - (IBAction)chooseCity:(id)sender {
   PlacesViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesViewController"];
+  vc.onSelectedCity = ^(NSString *selectedCity){
+    self.signUpCityTextField.text = selectedCity;
+  };
   BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
   [self presentViewController:nav animated:true completion:nil];
+}
+
+- (IBAction)unWindSegueToThis:(UIStoryboardSegue *)segue {
+  PlacesViewController *vc = (PlacesViewController *)segue.sourceViewController;
+  self.signUpCityTextField.text = vc.selectedCity;
 }
 
 

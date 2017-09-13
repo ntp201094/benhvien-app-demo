@@ -41,6 +41,7 @@
 
 - (void)setupHomeScreen {
   
+  self.window = nil;
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIStoryboard *homeStoryBoard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
   

@@ -18,5 +18,6 @@
 + (void)searchHospitalByProvince:(NSString *)province district:(NSString *)district completionBlock:(ApiComplitionBlock)completion;
 + (void)searchHospitalByProvince:(NSString *)province completionBlock:(ApiComplitionBlock)completion;
 + (void)getHospitalDetailById:(NSString *)hospitalId completionBlock:(ApiComplitionBlock)completion;
++ (void)registerUserByEmail:(NSString *)email fullname:(NSString *)fullName password:(NSString *)password city:(NSString *)city completionBlock:(ApiComplitionBlock)completion;
 
 @end

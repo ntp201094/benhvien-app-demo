@@ -15,6 +15,7 @@
   UITextField *_searchTextField;
   HNKGooglePlacesAutocompleteQuery *_query;
   NSArray *_searchResults;
+  NSString *selectedCity;
 }
 @property (weak, nonatomic) IBOutlet UITableView *placesTableView;
 
@@ -31,6 +32,7 @@
   _placesTableView.estimatedRowHeight = 44.0;
   
   [self setupNavigationBarItem];
+  [self reloadPlacesWithText:@"A"];
 }
 
 - (void)setupNavigationBarItem {
@@ -51,7 +53,9 @@
 }
 
 - (void)doneSearchPlacesScreen {
-  
+//  self.onSelectedCity(selectedCity);
+//  [self dismissViewControllerAnimated:YES completion:nil];
+  [self performSegueWithIdentifier:@"finishSearchingSegue" sender:self];
 }
 
 - (UITextField *)searchBox {
@@ -72,6 +76,10 @@
 
 - (void)textFieldDidChanged:(UITextField *)textField {
   NSString *searchText = textField.text;
+  [self reloadPlacesWithText:searchText];
+}
+
+- (void)reloadPlacesWithText:(NSString *)searchText {
   [_query fetchPlacesForSearchQuery:searchText
                          completion:^(NSArray *places, NSError *error)  {
                            if (error) {
@@ -99,5 +107,10 @@
 
 #pragma mark - UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  HNKGooglePlacesAutocompletePlace *data = _searchResults[indexPath.row];
+  selectedCity = data.name;
+  _selectedCity = data.name;
+}
 
 @end

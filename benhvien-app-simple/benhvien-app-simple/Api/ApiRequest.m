@@ -42,13 +42,13 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:GetHospitalDetail method:GET parameters:parameters completion:completion];
 }
 
-+ (void)registerUserEmail:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completionBlock:(ApiComplitionBlock)completion {
-    NSDictionary *parameters = @{ @"email": email,
-                                  @"password": password,
-                                  @"role": @"email",
-                                  @"city": city,
-                                  @"fullName": fullName};
-    [[ApiManager sharedClient] requestApiWithEndpoint:Register method:POST parameters:parameters completion:completion];
++ (void)registerUserByEmail:(NSString *)email fullname:(NSString *)fullName password:(NSString *)password city:(NSString *)city completionBlock:(ApiComplitionBlock)completion {
+  NSDictionary *parameters = @{ @"email": email,
+                                @"password": password,
+                                @"role": @"email",
+                                @"city": city,
+                                @"fullName": fullName};
+  [[ApiManager sharedClient] requestApiWithEndpoint:Register method:POST parameters:parameters completion:completion];
 }
 
 @end

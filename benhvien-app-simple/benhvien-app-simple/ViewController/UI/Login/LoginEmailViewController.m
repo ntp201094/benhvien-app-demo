@@ -9,6 +9,8 @@
 #import "LoginEmailViewController.h"
 #import "UIAlertController+Blocks.h"
 #import "AppDelegate.h"
+#import "PlacesViewController.h"
+#import "BaseNavigationController.h"
 
 typedef enum : NSUInteger {
   LOGIN = 0,
@@ -112,6 +114,16 @@ typedef enum : NSUInteger {
     completion(@"Bạn phải nhập password!", NO);
     return;
   }
+  if (password.length < 6) {
+    completion(@"Mật khẩu phải có ít nhất 6 kí tự", false);
+    return;
+  }
+  
+  if (password.length > 10) {
+    completion(@"Mật khẩu tối đa 10 kí tự", false);
+    return;
+  }
+  
   completion(@"", YES);
 }
 
@@ -174,5 +186,12 @@ typedef enum : NSUInteger {
       break;
   }
 }
+
+- (IBAction)chooseCity:(id)sender {
+  PlacesViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesViewController"];
+  BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
+  [self presentViewController:nav animated:true completion:nil];
+}
+
 
 @end

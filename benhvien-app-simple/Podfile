@@ -13,5 +13,6 @@ target 'benhvien-app-simple' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'OCGoogleDirectionsAPI'
+    pod 'HNKGooglePlacesAutocomplete'
 
 end

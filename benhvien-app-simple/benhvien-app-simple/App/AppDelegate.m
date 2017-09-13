@@ -15,6 +15,7 @@
 #import "BaseTabBarController.h"
 #import "AppInformationViewController.h"
 #import "HomeViewController.h"
+#import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
 
 #define GoogleApiKey                                        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
@@ -26,15 +27,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [GMSServices provideAPIKey:GoogleApiKey];
-    [GMSPlacesClient provideAPIKey:GoogleApiKey];
-    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
+  
+  [GMSServices provideAPIKey:GoogleApiKey];
+  [GMSPlacesClient provideAPIKey:GoogleApiKey];
+  [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
+  [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
   
   [self setupApplicationTheme];
-//  [self setupHomeScreen];
+  //  [self setupHomeScreen];
   
-    return YES;
+  return YES;
 }
 
 - (void)setupHomeScreen {

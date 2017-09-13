@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4832FF7E1F6935E900BFDDB6 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4832FF7D1F6935E900BFDDB6 /* PlacesViewController.m */; };
+		4832FF821F69362000BFDDB6 /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */; };
 		48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F5E1F55054900DD077D /* SideMenuViewController.m */; };
 		48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F621F55060E00DD077D /* MenuItemTableViewCell.m */; };
 		520B260C1F34997300137206 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260B1F34997300137206 /* ApiManager.m */; };
@@ -64,6 +66,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4832FF7C1F6935E900BFDDB6 /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
+		4832FF7D1F6935E900BFDDB6 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
+		4832FF801F69362000BFDDB6 /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
+		4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
 		48708F5D1F55054900DD077D /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		48708F5E1F55054900DD077D /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		48708F611F55060E00DD077D /* MenuItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemTableViewCell.h; sourceTree = "<group>"; };
@@ -187,6 +193,25 @@
 				82CB3F7C591A4F53713EDDAF /* Pods_benhvien_app_simple.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4832FF7B1F6935C400BFDDB6 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				4832FF7C1F6935E900BFDDB6 /* PlacesViewController.h */,
+				4832FF7D1F6935E900BFDDB6 /* PlacesViewController.m */,
+				4832FF7F1F69360000BFDDB6 /* TableViewCell */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		4832FF7F1F69360000BFDDB6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4832FF801F69362000BFDDB6 /* PlacesTableViewCell.h */,
+				4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		48708F5C1F55052C00DD077D /* SideMenu */ = {
@@ -383,6 +408,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4832FF7B1F6935C400BFDDB6 /* Places */,
 				526DBB571F6027D700BE29A5 /* Login */,
 				52387AC01F56FC92002EC77C /* AppInformation */,
 				48708F5C1F55052C00DD077D /* SideMenu */,
@@ -600,7 +626,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		639E04E5EAACC6FCDA9D1D2C /* [CP] Embed Pods Frameworks */ = {
@@ -611,10 +637,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-benhvien-app-simple/Pods-benhvien-app-simple-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.framework",
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KASlideShow/KASlideShow.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -622,10 +650,12 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HNKGooglePlacesAutocomplete.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KASlideShow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCGoogleDirectionsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -677,6 +707,7 @@
 				5241C8961F2B5B1100485790 /* BaseNavigationController.m in Sources */,
 				520B260C1F34997300137206 /* ApiManager.m in Sources */,
 				523DC9C51F31F52200039835 /* HomeViewController.m in Sources */,
+				4832FF7E1F6935E900BFDDB6 /* PlacesViewController.m in Sources */,
 				523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */,
 				5222ADC11F4B02B800E65D3F /* NameTableViewCell.m in Sources */,
 				5222ADE21F4B103400E65D3F /* HospitalName.m in Sources */,
@@ -699,6 +730,7 @@
 				5222ADDC1F4B0C3D00E65D3F /* SearchResultTableViewCell.m in Sources */,
 				5222ADE51F4B104600E65D3F /* HospitalAddress.m in Sources */,
 				5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */,
+				4832FF821F69362000BFDDB6 /* PlacesTableViewCell.m in Sources */,
 				5241C8CF1F2B684D00485790 /* UIColor+Hex.m in Sources */,
 				5222ADD51F4B030200E65D3F /* LocationTableViewCell.m in Sources */,
 				524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */,

@@ -56,6 +56,8 @@
 		5241C8D21F2B684D00485790 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241C8CD1F2B684D00485790 /* UIViewController+Storyboard.m */; };
 		524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */; };
 		5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5250653C1F41D0B60011B517 /* CitySerializer.m */; };
+		525AEC9D1F6BF94B0040BB6B /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 525AEC9C1F6BF94B0040BB6B /* UserDataManager.m */; };
+		525AECA11F6BFAB30040BB6B /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 525AECA01F6BFAB30040BB6B /* AppConstants.m */; };
 		526DBB5A1F6027D700BE29A5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB591F6027D700BE29A5 /* LoginViewController.m */; };
 		526DBB5E1F60286A00BE29A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526DBB5D1F60286A00BE29A5 /* Login.storyboard */; };
 		526DBB611F602CD300BE29A5 /* LoginEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB601F602CD300BE29A5 /* LoginEmailViewController.m */; };
@@ -158,6 +160,10 @@
 		524A55A01F3DE20E00DBAB4E /* HospitalSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSerializer.m; sourceTree = "<group>"; };
 		5250653B1F41D0B60011B517 /* CitySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySerializer.h; sourceTree = "<group>"; };
 		5250653C1F41D0B60011B517 /* CitySerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySerializer.m; sourceTree = "<group>"; };
+		525AEC9B1F6BF94B0040BB6B /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		525AEC9C1F6BF94B0040BB6B /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		525AEC9F1F6BFAB30040BB6B /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		525AECA01F6BFAB30040BB6B /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		526DBB581F6027D700BE29A5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		526DBB591F6027D700BE29A5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		526DBB5D1F60286A00BE29A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -362,6 +368,8 @@
 		5241C86F1F2B5A4B00485790 /* benhvien-app-simple */ = {
 			isa = PBXGroup;
 			children = (
+				525AEC9E1F6BFA8F0040BB6B /* AppConstants */,
+				525AEC9A1F6BF93A0040BB6B /* UserData */,
 				524A559E1F3DE1F500DBAB4E /* Serializers */,
 				520B26081F34981100137206 /* Api */,
 				529E37561F2F5D99004D114C /* Model */,
@@ -486,6 +494,24 @@
 				5250653C1F41D0B60011B517 /* CitySerializer.m */,
 			);
 			path = Serializers;
+			sourceTree = "<group>";
+		};
+		525AEC9A1F6BF93A0040BB6B /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				525AEC9B1F6BF94B0040BB6B /* UserDataManager.h */,
+				525AEC9C1F6BF94B0040BB6B /* UserDataManager.m */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		525AEC9E1F6BFA8F0040BB6B /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				525AEC9F1F6BFAB30040BB6B /* AppConstants.h */,
+				525AECA01F6BFAB30040BB6B /* AppConstants.m */,
+			);
+			path = AppConstants;
 			sourceTree = "<group>";
 		};
 		526DBB571F6027D700BE29A5 /* Login */ = {
@@ -710,6 +736,7 @@
 				5222ADEE1F4B107600E65D3F /* HospitalLocation.m in Sources */,
 				529E37661F2F6C52004D114C /* HLTableViewCell.m in Sources */,
 				523DC9C61F31F52200039835 /* DetailViewController.m in Sources */,
+				525AEC9D1F6BF94B0040BB6B /* UserDataManager.m in Sources */,
 				5222ADD01F4B02EF00E65D3F /* DescriptionTableViewCell.m in Sources */,
 				5241C8CE1F2B684D00485790 /* UIAlertController+Blocks.m in Sources */,
 				5222ADE81F4B105200E65D3F /* HospitalPhone.m in Sources */,
@@ -727,6 +754,7 @@
 				520B260F1F34998000137206 /* ApiRequest.m in Sources */,
 				526DBB5A1F6027D700BE29A5 /* LoginViewController.m in Sources */,
 				523DC9CD1F31F52200039835 /* SearchResultViewController.m in Sources */,
+				525AECA11F6BFAB30040BB6B /* AppConstants.m in Sources */,
 				48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */,
 				5241C88A1F2B5AA800485790 /* AppDelegate.m in Sources */,
 				5222ADC61F4B02CF00E65D3F /* AddressTableViewCell.m in Sources */,

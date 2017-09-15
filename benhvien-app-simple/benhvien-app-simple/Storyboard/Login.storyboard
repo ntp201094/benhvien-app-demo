@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6W8-CT-mOp">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6W8-CT-mOp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +77,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ybP-Hc-qIx" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wNg-bU-NBB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wNg-bU-NBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -106,7 +106,7 @@
                                 <rect key="frame" x="0.0" y="132" width="375" height="450"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-Ax-r1j">
-                                        <rect key="frame" x="97.5" y="0.0" width="180" height="180"/>
+                                        <rect key="frame" x="98" y="0.0" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="ZvV-yB-Mud"/>
                                             <constraint firstAttribute="height" constant="180" id="lcc-nQ-2Vt"/>
@@ -308,7 +308,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lx-CI-7Yh" userLabel="Upload View">
-                                        <rect key="frame" x="139.5" y="154" width="96" height="40"/>
+                                        <rect key="frame" x="140" y="154" width="96" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-photo-btn" translatesAutoresizingMaskIntoConstraints="NO" id="tSa-x2-FiP">
                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
@@ -388,7 +388,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm2-ga-2OL">
-                                        <rect key="frame" x="131.5" y="121" width="112" height="30"/>
+                                        <rect key="frame" x="132" y="121" width="112" height="30"/>
                                         <state key="normal" title="Quên mật khẩu?">
                                             <color key="titleColor" red="0.7725490196" green="0.047058823530000002" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -408,7 +408,7 @@
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-J3-iYC">
-                                <rect key="frame" x="82.5" y="84" width="210" height="29"/>
+                                <rect key="frame" x="83" y="84" width="210" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="VTt-9J-YV1"/>
                                 </constraints>
@@ -470,11 +470,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="33Y-bL-yJR" id="2XD-fB-H85">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-z4-3Lg">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="43.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -525,13 +525,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng điền địa chỉ email bạn đã dùng để đăng ký tài khoản." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a4-CX-fHu">
-                                <rect key="frame" x="20" y="40" width="335" height="33.5"/>
+                                <rect key="frame" x="20" y="40" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-0n-JpR">
-                                <rect key="frame" x="0.0" y="93.5" width="375" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-0n-JpR" userLabel="Input View">
+                                <rect key="frame" x="0.0" y="94" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Njw-jG-Ti4">
                                         <rect key="frame" x="10" y="10" width="355" height="30"/>
@@ -550,7 +550,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3o-Em-7mQ">
-                                <rect key="frame" x="20" y="163.5" width="335" height="45"/>
+                                <rect key="frame" x="20" y="164" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.46274509800000002" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qQc-4e-evl"/>
@@ -578,6 +578,9 @@
                             <constraint firstItem="D3o-Em-7mQ" firstAttribute="top" secondItem="OWQ-0n-JpR" secondAttribute="bottom" constant="20" id="qmw-Ls-ckL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotEmailView" destination="OWQ-0n-JpR" id="U2I-zB-sdx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q37-EY-NRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

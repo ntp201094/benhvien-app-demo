@@ -16,6 +16,8 @@
 #import "AppInformationViewController.h"
 #import "HomeViewController.h"
 #import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
+#import "LoginEmailViewController.h"
+#import "UserDataManager.h"
 
 #define GoogleApiKey                                        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
@@ -34,14 +36,27 @@
   [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
   
   [self setupApplicationTheme];
-  //  [self setupHomeScreen];
+  if ([[UserDataManager sharedClient].accessToken isEqualToString:@""]) {
+    [self setupFirstLoginScreen];
+  } else {
+    [self setupHomeScreen];
+  }
   
   return YES;
 }
 
+- (void)setupFirstLoginScreen {
+  
+  [[UserDataManager sharedClient] clearUserData];
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+  LoginEmailViewController *loginEmailController = [loginStoryboard instantiateInitialViewController];
+  [self.window setRootViewController:loginEmailController];
+  [self.window makeKeyAndVisible];
+}
+
 - (void)setupHomeScreen {
   
-  self.window = nil;
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIStoryboard *homeStoryBoard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
   

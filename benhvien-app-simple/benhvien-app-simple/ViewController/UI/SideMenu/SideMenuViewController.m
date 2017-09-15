@@ -14,6 +14,7 @@
 typedef enum : NSUInteger {
   SearchIndex = 0,
   InformationIndex = 1,
+  Logout = 2
 } MenuItemIndex;
 
 @interface SideMenuViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -28,14 +29,14 @@ typedef enum : NSUInteger {
   [super viewDidLoad];
   self.tableView.dataSource = self;
   self.tableView.delegate = self;
-    [self.tableView setTableFooterView:[UIView new]];
-    self.tableView.scrollEnabled = NO;
+  [self.tableView setTableFooterView:[UIView new]];
+  self.tableView.scrollEnabled = NO;
 }
 
 #pragma mark - UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return 2;
+  return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,6 +53,11 @@ typedef enum : NSUInteger {
       cell.itemNameLabel.text = @"Thông tin";
       break;
     }
+    case Logout:{
+      cell.itemIconImageView.image = [UIImage imageNamed:@"logout-icon"];
+      cell.itemNameLabel.text = @"Đăng xuất";
+      break;
+    }
     default:
       break;
   }
@@ -62,9 +68,13 @@ typedef enum : NSUInteger {
 #pragma mark - UITableViewDelegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.delegate) {
-        [self.delegate moveToTabWithIndex:indexPath.row completion:nil];
+  if (self.delegate) {
+    if (indexPath.row == Logout) {
+      [self.delegate logout];
+      return;
     }
+    [self.delegate moveToTabWithIndex:indexPath.row completion:nil];
+  }
 }
 
 

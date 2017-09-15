@@ -12,6 +12,7 @@
 #import "PlacesViewController.h"
 #import "BaseNavigationController.h"
 #import "ForgotPasswordViewController.h"
+#import "UserDataManager.h"
 
 typedef enum : NSUInteger {
   LOGIN = 0,
@@ -153,6 +154,7 @@ typedef enum : NSUInteger {
     [self hideHUD];
     if (!error) {
       if (response.success) {
+        [[UserDataManager sharedClient] setUserData:response.data];
         AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [app setupHomeScreen];
       } else {
@@ -192,6 +194,7 @@ typedef enum : NSUInteger {
     [self hideHUD];
     if (!error) {
       if (response.success) {
+        [[UserDataManager sharedClient] setUserData:response.data];
         AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [app setupHomeScreen];
       } else {

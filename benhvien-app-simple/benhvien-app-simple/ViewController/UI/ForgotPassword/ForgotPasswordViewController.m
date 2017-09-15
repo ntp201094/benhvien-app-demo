@@ -10,6 +10,8 @@
 
 @interface ForgotPasswordViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *forgotEmailView;
+
 @end
 
 @implementation ForgotPasswordViewController
@@ -19,6 +21,8 @@
   
   self.title = @"Quên mật khẩu";
   [self setupNavigationBarItem];
+  self.forgotEmailView.layer.borderWidth = 0.5f;
+  self.forgotEmailView.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 - (void)setupNavigationBarItem {

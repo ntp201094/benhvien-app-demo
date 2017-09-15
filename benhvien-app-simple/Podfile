@@ -14,5 +14,6 @@ target 'benhvien-app-simple' do
     pod 'GooglePlaces'
     pod 'OCGoogleDirectionsAPI'
     pod 'HNKGooglePlacesAutocomplete'
+    pod 'NSUserDefaults+Utility'
 
 end

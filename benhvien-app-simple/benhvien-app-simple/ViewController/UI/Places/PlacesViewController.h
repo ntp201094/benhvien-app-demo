@@ -10,7 +10,6 @@
 
 @interface PlacesViewController : BaseViewController
 
-@property (nonatomic, strong) void (^onSelectedCity)(NSString *);
 @property (nonatomic, assign) NSString *selectedCity;
 
 @end

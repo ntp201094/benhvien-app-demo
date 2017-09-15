@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "PlacesViewController.h"
 #import "BaseNavigationController.h"
+#import "ForgotPasswordViewController.h"
 
 typedef enum : NSUInteger {
   LOGIN = 0,
@@ -249,9 +250,6 @@ typedef enum : NSUInteger {
 
 - (IBAction)chooseCity:(id)sender {
   PlacesViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesViewController"];
-  vc.onSelectedCity = ^(NSString *selectedCity){
-    self.signUpCityTextField.text = selectedCity;
-  };
   BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
   [self presentViewController:nav animated:true completion:nil];
 }
@@ -261,5 +259,10 @@ typedef enum : NSUInteger {
   self.signUpCityTextField.text = vc.selectedCity;
 }
 
+- (IBAction)goToForgotPasswordScreen:(id)sender {
+  ForgotPasswordViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
+  BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
+  [self presentViewController:nav animated:true completion:nil];
+}
 
 @end

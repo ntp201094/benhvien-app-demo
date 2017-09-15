@@ -15,7 +15,6 @@
   UITextField *_searchTextField;
   HNKGooglePlacesAutocompleteQuery *_query;
   NSArray *_searchResults;
-  NSString *selectedCity;
 }
 @property (weak, nonatomic) IBOutlet UITableView *placesTableView;
 
@@ -53,8 +52,6 @@
 }
 
 - (void)doneSearchPlacesScreen {
-//  self.onSelectedCity(selectedCity);
-//  [self dismissViewControllerAnimated:YES completion:nil];
   [self performSegueWithIdentifier:@"finishSearchingSegue" sender:self];
 }
 
@@ -109,7 +106,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   HNKGooglePlacesAutocompletePlace *data = _searchResults[indexPath.row];
-  selectedCity = data.name;
   _selectedCity = data.name;
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4832FF7E1F6935E900BFDDB6 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4832FF7D1F6935E900BFDDB6 /* PlacesViewController.m */; };
 		4832FF821F69362000BFDDB6 /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */; };
+		484228221F6B7B5100BEB2C0 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484228211F6B7B5100BEB2C0 /* ForgotPasswordViewController.m */; };
 		48708F5F1F55054900DD077D /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F5E1F55054900DD077D /* SideMenuViewController.m */; };
 		48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48708F621F55060E00DD077D /* MenuItemTableViewCell.m */; };
 		520B260C1F34997300137206 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B260B1F34997300137206 /* ApiManager.m */; };
@@ -70,6 +71,8 @@
 		4832FF7D1F6935E900BFDDB6 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
 		4832FF801F69362000BFDDB6 /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
 		4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
+		484228201F6B7B5100BEB2C0 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		484228211F6B7B5100BEB2C0 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		48708F5D1F55054900DD077D /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		48708F5E1F55054900DD077D /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		48708F611F55060E00DD077D /* MenuItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemTableViewCell.h; sourceTree = "<group>"; };
@@ -212,6 +215,15 @@
 				4832FF811F69362000BFDDB6 /* PlacesTableViewCell.m */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		4842281F1F6B7B3A00BEB2C0 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				484228201F6B7B5100BEB2C0 /* ForgotPasswordViewController.h */,
+				484228211F6B7B5100BEB2C0 /* ForgotPasswordViewController.m */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		48708F5C1F55052C00DD077D /* SideMenu */ = {
@@ -408,6 +420,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4842281F1F6B7B3A00BEB2C0 /* ForgotPassword */,
 				4832FF7B1F6935C400BFDDB6 /* Places */,
 				526DBB571F6027D700BE29A5 /* Login */,
 				52387AC01F56FC92002EC77C /* AppInformation */,
@@ -724,6 +737,7 @@
 				522DD2831F50482C000A196C /* DirectionViewController.m in Sources */,
 				52387AC31F56FCB4002EC77C /* AppInformationViewController.m in Sources */,
 				48708F631F55060E00DD077D /* MenuItemTableViewCell.m in Sources */,
+				484228221F6B7B5100BEB2C0 /* ForgotPasswordViewController.m in Sources */,
 				5222ADDF1F4B102600E65D3F /* HospitalThumbImage.m in Sources */,
 				5222ADBC1F4B02A200E65D3F /* ThumbImageTableViewCell.m in Sources */,
 				529E375A1F2F5DD0004D114C /* Hospital.m in Sources */,

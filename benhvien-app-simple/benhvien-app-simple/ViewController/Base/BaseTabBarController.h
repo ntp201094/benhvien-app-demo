@@ -12,8 +12,8 @@
 
 @interface BaseTabBarController : UITabBarController
 
-@property (nonatomic, strong) HomeViewController *homeController;
-@property (nonatomic, strong) AppInformationViewController *appInfoController;
+@property (nonatomic, weak) HomeViewController *homeController;
+@property (nonatomic, weak) AppInformationViewController *appInfoController;
 
 - (void)setupContainerViewDelegate;
 

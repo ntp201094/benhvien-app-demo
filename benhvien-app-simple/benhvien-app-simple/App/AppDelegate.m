@@ -47,8 +47,8 @@
 
 - (void)setupFirstLoginScreen {
   
-  [[UserDataManager sharedClient] clearUserData];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  [[UserDataManager sharedClient] clearUserData];
   UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
   LoginEmailViewController *loginEmailController = [loginStoryboard instantiateInitialViewController];
   [self.window setRootViewController:loginEmailController];
@@ -56,7 +56,6 @@
 }
 
 - (void)setupHomeScreen {
-  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIStoryboard *homeStoryBoard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
   

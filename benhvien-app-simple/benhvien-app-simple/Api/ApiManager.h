@@ -22,6 +22,6 @@ typedef void (^ApiComplitionBlock)(ApiResponse *response, NSError *error);
 
 + (instancetype)sharedClient;
 
-- (void)requestApiWithEndpoint:(NSString *)endpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters completion:(ApiComplitionBlock)completion;
+- (void)requestApiWithEndpoint:(NSString *)endpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters hasAuth:(BOOL)hasAuth completion:(ApiComplitionBlock)completion;
 
 @end

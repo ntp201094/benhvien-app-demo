@@ -20,7 +20,7 @@
 @interface BaseTabBarController () <BaseViewControllerDelegate>
 
 @property (nonatomic, strong) SideMenuViewController *sideMenuViewController;
-@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, weak) UIWindow *window;
 
 @end
 

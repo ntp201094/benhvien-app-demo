@@ -10,4 +10,6 @@
 
 @interface AccountViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;
+
 @end

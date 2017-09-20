@@ -58,6 +58,8 @@
 		5250653D1F41D0B60011B517 /* CitySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5250653C1F41D0B60011B517 /* CitySerializer.m */; };
 		525AEC9D1F6BF94B0040BB6B /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 525AEC9C1F6BF94B0040BB6B /* UserDataManager.m */; };
 		525AECA11F6BFAB30040BB6B /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 525AECA01F6BFAB30040BB6B /* AppConstants.m */; };
+		5260F78D1F728E2400E66381 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5260F78C1F728E2400E66381 /* AccountViewController.m */; };
+		5260F7901F729E8B00E66381 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5260F78F1F729E8B00E66381 /* ChangePasswordViewController.m */; };
 		526DBB5A1F6027D700BE29A5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB591F6027D700BE29A5 /* LoginViewController.m */; };
 		526DBB5E1F60286A00BE29A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526DBB5D1F60286A00BE29A5 /* Login.storyboard */; };
 		526DBB611F602CD300BE29A5 /* LoginEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DBB601F602CD300BE29A5 /* LoginEmailViewController.m */; };
@@ -164,6 +166,10 @@
 		525AEC9C1F6BF94B0040BB6B /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
 		525AEC9F1F6BFAB30040BB6B /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		525AECA01F6BFAB30040BB6B /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		5260F78B1F728E2400E66381 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		5260F78C1F728E2400E66381 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		5260F78E1F729E8B00E66381 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		5260F78F1F729E8B00E66381 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		526DBB581F6027D700BE29A5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		526DBB591F6027D700BE29A5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		526DBB5D1F60286A00BE29A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -428,6 +434,7 @@
 		5241C88D1F2B5AAF00485790 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5260F78A1F728E0D00E66381 /* Account */,
 				4842281F1F6B7B3A00BEB2C0 /* ForgotPassword */,
 				4832FF7B1F6935C400BFDDB6 /* Places */,
 				526DBB571F6027D700BE29A5 /* Login */,
@@ -512,6 +519,17 @@
 				525AECA01F6BFAB30040BB6B /* AppConstants.m */,
 			);
 			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		5260F78A1F728E0D00E66381 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				5260F78B1F728E2400E66381 /* AccountViewController.h */,
+				5260F78C1F728E2400E66381 /* AccountViewController.m */,
+				5260F78E1F729E8B00E66381 /* ChangePasswordViewController.h */,
+				5260F78F1F729E8B00E66381 /* ChangePasswordViewController.m */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		526DBB571F6027D700BE29A5 /* Login */ = {
@@ -749,6 +767,7 @@
 				523DC9C51F31F52200039835 /* HomeViewController.m in Sources */,
 				4832FF7E1F6935E900BFDDB6 /* PlacesViewController.m in Sources */,
 				523DC9C41F31F52200039835 /* AdvanceSearchViewController.m in Sources */,
+				5260F7901F729E8B00E66381 /* ChangePasswordViewController.m in Sources */,
 				5222ADC11F4B02B800E65D3F /* NameTableViewCell.m in Sources */,
 				5222ADE21F4B103400E65D3F /* HospitalName.m in Sources */,
 				520B260F1F34998000137206 /* ApiRequest.m in Sources */,
@@ -776,6 +795,7 @@
 				5241C8CF1F2B684D00485790 /* UIColor+Hex.m in Sources */,
 				5222ADD51F4B030200E65D3F /* LocationTableViewCell.m in Sources */,
 				524A55A11F3DE20E00DBAB4E /* HospitalSerializer.m in Sources */,
+				5260F78D1F728E2400E66381 /* AccountViewController.m in Sources */,
 				5241C8721F2B5A4B00485790 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

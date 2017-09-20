@@ -36,6 +36,7 @@
 - (void)setupContainerViewDelegate {
   self.homeController.delegate = self;
   self.appInfoController.delegate = self;
+  self.accountController.delegate = self;
 }
 
 // MARK: Private methods
@@ -87,6 +88,8 @@
 }
 
 - (void)resetInputSettingsAfterCloseMenu {
+  self.accountController.isMenuDisplaying = NO;
+  self.accountController.changePasswordButton.userInteractionEnabled = YES;
   self.homeController.isMenuDisplaying = NO;
   self.homeController.searchTextField.userInteractionEnabled = YES;
   self.homeController.advancedSearchButton.userInteractionEnabled = YES;

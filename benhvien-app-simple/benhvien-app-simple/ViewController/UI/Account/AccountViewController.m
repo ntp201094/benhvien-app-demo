@@ -7,31 +7,61 @@
 //
 
 #import "AccountViewController.h"
+#import "ChangePasswordViewController.h"
+#import "BaseNavigationController.h"
+#import "UserDataManager.h"
 
 @interface AccountViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 
 @end
 
 @implementation AccountViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  UserDataManager *userData = [UserDataManager sharedClient];
+  self.title = @"Tài khoản";
+  
+  self.fullNameLabel.text = userData.fullName;
+  self.emailLabel.text = userData.email;
+  self.cityLabel.text = userData.city;
+  [self setupMenuBarButton];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)goToChangePasswordScreen:(id)sender {
+  ChangePasswordViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+  BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
+  [self presentViewController:nav animated:true completion:nil];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - BaseViewControllerDelegate
+
+- (void)showSideMenuBar {
+  [self.view endEditing:NO];
+  if (self.delegate) {
+    if (self.isMenuDisplaying) {
+      [self.delegate closeSideMenu:nil];
+      self.changePasswordButton.userInteractionEnabled = YES;
+    } else {
+      [self.delegate showSideMenu:nil];
+      self.changePasswordButton.userInteractionEnabled = NO;
+    }
+    self.isMenuDisplaying = !self.isMenuDisplaying;
+  }
 }
-*/
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+  if (self.isMenuDisplaying) {
+    [self.delegate closeSideMenu:^{
+      self.changePasswordButton.userInteractionEnabled = YES;
+      self.isMenuDisplaying = NO;
+    }];
+  }
+}
 
 @end

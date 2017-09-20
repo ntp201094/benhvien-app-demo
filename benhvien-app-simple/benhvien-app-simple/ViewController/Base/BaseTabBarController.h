@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
 #import "AppInformationViewController.h"
+#import "AccountViewController.h"
 
 @interface BaseTabBarController : UITabBarController
 
 @property (nonatomic, weak) HomeViewController *homeController;
 @property (nonatomic, weak) AppInformationViewController *appInfoController;
+@property (nonatomic, weak) AccountViewController *accountController;
 
 - (void)setupContainerViewDelegate;
 

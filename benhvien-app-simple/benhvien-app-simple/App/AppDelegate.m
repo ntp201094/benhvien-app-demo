@@ -15,6 +15,7 @@
 #import "BaseTabBarController.h"
 #import "AppInformationViewController.h"
 #import "HomeViewController.h"
+#import "AccountViewController.h"
 #import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
 #import "LoginEmailViewController.h"
 #import "UserDataManager.h"
@@ -59,6 +60,9 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIStoryboard *homeStoryBoard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
   
+  AccountViewController *accountController = [homeStoryBoard instantiateViewControllerWithIdentifier:@"AccountViewController"];
+  BaseNavigationController *accountNavigationController = [[BaseNavigationController alloc] initWithRootViewController:accountController];
+  
   HomeViewController *homeController = [homeStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
   BaseNavigationController *homeNavigationController = [[BaseNavigationController alloc] initWithRootViewController:homeController];
   
@@ -66,10 +70,12 @@
   BaseNavigationController *appInfoNavigationController = [[BaseNavigationController alloc] initWithRootViewController:appInfoController];
   
   BaseTabBarController *tabBarController = [BaseTabBarController new];
+  tabBarController.accountController = accountNavigationController.viewControllers[0];
   tabBarController.homeController = homeNavigationController.viewControllers[0];
   tabBarController.appInfoController = appInfoNavigationController.viewControllers[0];
-  tabBarController.viewControllers = @[homeNavigationController, appInfoNavigationController];
+  tabBarController.viewControllers = @[accountNavigationController, homeNavigationController, appInfoNavigationController];
   [tabBarController setupContainerViewDelegate];
+  tabBarController.selectedIndex = 1; // home view
   
   [self.window setRootViewController:tabBarController];
   [self.window makeKeyAndVisible];

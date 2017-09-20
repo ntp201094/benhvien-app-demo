@@ -18,5 +18,6 @@
 
 #define Login               @"authenticate"
 #define Register            @"register"
+#define ChangePassword      @"changePass"
 
 #endif /* ApiEndpoint_h */

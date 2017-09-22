@@ -39,7 +39,7 @@
 
 - (void)setupManager {
   self.manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-  self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+  self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
 }
 
 - (void)requestApiWithEndpoint:(NSString *)endpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters hasAuth:(BOOL)hasAuth completion:(ApiComplitionBlock)completion {

@@ -17,8 +17,9 @@
   [[ApiManager sharedClient] requestApiWithEndpoint:Login method:POST parameters:parameters hasAuth:NO completion:completion];
 }
 
-+ (void)searchHospitalByName:(NSString *)name completionBlock:(ApiComplitionBlock)completion {
-    NSDictionary *parameters = @{@"name": name};
++ (void)searchHospitalByName:(NSString *)name page:(NSInteger)page completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{@"name": name,
+                                 @"page": @(page)};
   [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters hasAuth:YES completion:completion];
 }
 
@@ -26,14 +27,16 @@
   [[ApiManager sharedClient] requestApiWithEndpoint:GetAllCities method:GET parameters:nil hasAuth:YES completion:completion];
 }
 
-+ (void)searchHospitalByProvince:(NSString *)province district:(NSString *)district completionBlock:(ApiComplitionBlock)completion {
++ (void)searchHospitalByProvince:(NSString *)province district:(NSString *)district page:(NSInteger)page completionBlock:(ApiComplitionBlock)completion {
     NSDictionary *parameters = @{@"city": province,
-                                 @"district": district};
+                                 @"district": district,
+                                 @"page": @(page)};
   [[ApiManager sharedClient] requestApiWithEndpoint:SearchByLocation method:GET parameters:parameters hasAuth:YES completion:completion];
 }
 
-+ (void)searchHospitalByProvince:(NSString *)province completionBlock:(ApiComplitionBlock)completion {
-    NSDictionary *parameters = @{ @"city": province };
++ (void)searchHospitalByProvince:(NSString *)province page:(NSInteger)page completionBlock:(ApiComplitionBlock)completion {
+    NSDictionary *parameters = @{ @"city": province,
+                                  @"page": @(page)};
   [[ApiManager sharedClient] requestApiWithEndpoint:SearchByProvince method:GET parameters:parameters hasAuth:YES completion:completion];
 }
 

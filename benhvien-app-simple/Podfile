@@ -15,5 +15,7 @@ target 'benhvien-app-simple' do
     pod 'OCGoogleDirectionsAPI'
     pod 'HNKGooglePlacesAutocomplete'
     pod 'NSUserDefaults+Utility'
+    pod 'SVPullToRefresh'
+    pod 'APAvatarImageView'
 
 end

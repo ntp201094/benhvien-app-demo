@@ -37,6 +37,25 @@
     }
 }
 
+- (void)loadHospitalListWithResponse:(ApiResponse *)response {
+    NSLog(@"%@", response.originalResponse);
+    NSArray *data = [response.data objectForKey:@"hospitals"];
+    NSInteger page = [[response.data objectForKey:@"page"] integerValue];
+    NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
+    if (data.count > 0) {
+        NSArray *hospitalSerializers = [[HospitalSerializer alloc] parseArrayFromDatas:data];
+        NSArray *hospitalList = [[Hospital alloc] parseArrayFromSerializers:hospitalSerializers];
+        SearchResultViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
+        vc.hospitalList = hospitalList;
+        vc.name = self.searchTextField.text;
+        vc.currentPage = page;
+        vc.totalPages = pages;
+        [self.navigationController showViewController:vc sender:self];
+    } else {
+        [self showAlertWithTitle:@"Loi khong tim thay" message:@"Khong tim thay hospital"];
+    }
+}
+
 - (IBAction)goToAdvanceSearch:(id)sender {
     AdvanceSearchViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AdvanceSearchViewController"];
     
@@ -48,20 +67,10 @@
     [self showHUD];
     [self validateHospitalName:self.searchTextField.text completion:^(BOOL isValidate, NSString *message) {
         if(isValidate) {
-            [ApiRequest searchHospitalByName:self.searchTextField.text
+            [ApiRequest searchHospitalByName:self.searchTextField.text page:1
                              completionBlock:^(ApiResponse *response, NSError *error) {
                                  if (!error) {
-                                     NSLog(@"%@", response.originalResponse);
-                                     NSArray *data = [response.data objectForKey:@"hospitals"];
-                                     if (data.count > 0) {
-                                         NSArray *hospitalSerializers = [[HospitalSerializer alloc] parseArrayFromDatas:data];
-                                         NSArray *hospitalList = [[Hospital alloc] parseArrayFromSerializers:hospitalSerializers];
-                                         SearchResultViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
-                                         vc.hospitalList = hospitalList;
-                                         [self.navigationController showViewController:vc sender:self];
-                                     } else {
-                                         [self showAlertWithTitle:@"Loi khong tim thay" message:@"Khong tim thay hospital"];
-                                     }
+                                     [self loadHospitalListWithResponse:response];
                                  } else {
                                      NSLog(@"%@", [error localizedDescription]);
                                  }

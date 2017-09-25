@@ -75,14 +75,20 @@
     }];
 }
 
-- (void)loadHospitalListWithResponse:(ApiResponse *)response {
+- (void)loadHospitalListWithResponse:(ApiResponse *)response province:(NSString *)provinceName district:(NSString *)districtName {
     NSLog(@"%@", response.originalResponse);
     NSArray *data = [response.data objectForKey:@"hospitals"];
+    NSInteger page = [[response.data objectForKey:@"page"] integerValue];
+    NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
     if (data.count > 0) {
         NSArray *hospitalSerializers = [[HospitalSerializer alloc] parseArrayFromDatas:data];
         NSArray *hospitalList = [[Hospital alloc] parseArrayFromSerializers:hospitalSerializers];
         SearchResultViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
         vc.hospitalList = hospitalList;
+        vc.province = provinceName;
+        vc.district = districtName;
+        vc.currentPage = page;
+        vc.totalPages = pages;
         [self.navigationController showViewController:vc sender:self];
     } else {
         [self showAlertWithTitle:@"Loi khong tim thay" message:@"Khong tim thay hospital"];
@@ -100,16 +106,16 @@
     NSString *provinceName = [self.provinceDropDownTextField.selectedItem stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSString *districtName = [self.districtDropDownTextField.selectedItem stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([districtName isEqualToString:allDistrict]) {
-        [ApiRequest searchHospitalByProvince:provinceName completionBlock:^(ApiResponse *response, NSError *error) {
+        [ApiRequest searchHospitalByProvince:provinceName page:1 completionBlock:^(ApiResponse *response, NSError *error) {
             if (!error) {
-                [self loadHospitalListWithResponse:response];
+                [self loadHospitalListWithResponse:response province:provinceName district:nil];
                 [self hideHUD];
             }
         }];
     } else {
-        [ApiRequest searchHospitalByProvince:provinceName district:districtName completionBlock:^(ApiResponse *response, NSError *error) {
+        [ApiRequest searchHospitalByProvince:provinceName district:districtName page:1 completionBlock:^(ApiResponse *response, NSError *error) {
             if (!error) {
-                [self loadHospitalListWithResponse:response];
+                [self loadHospitalListWithResponse:response province:provinceName district:districtName];
                 [self hideHUD];
             }
         }];

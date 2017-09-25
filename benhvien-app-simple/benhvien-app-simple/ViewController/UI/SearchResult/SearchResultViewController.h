@@ -10,7 +10,12 @@
 
 @interface SearchResultViewController : BaseViewController
 
-@property (strong, nonatomic) NSArray *hospitalList;
+@property (nonatomic) NSString *province;
+@property (nonatomic) NSString *district;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSArray *hospitalList;
+@property (nonatomic) NSInteger totalPages;
+@property (nonatomic) NSInteger currentPage;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

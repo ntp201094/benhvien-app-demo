@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginEmailViewController.h"
 
 @interface LoginViewController ()
 
@@ -16,6 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = true;
+}
+
+- (IBAction)goToLoginEmailScreen:(id)sender {
+    LoginEmailViewController *loginEmailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginEmailViewController"];
+    [self.navigationController showViewController:loginEmailVC sender:self];
 }
 
 @end

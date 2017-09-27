@@ -15,6 +15,7 @@
 #define UserCity                  @"UserCity"
 #define UserFullName              @"UserFullName"
 
+
 @interface AppConstants : NSObject
 
 @end

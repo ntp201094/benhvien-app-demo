@@ -23,17 +23,18 @@
     [super viewDidLoad];
     [self setupBackBarButtton];
     self.title = @"Kết quả";
+    __weak SearchResultViewController *weakSelf = self;
     
     [self.tableView addPullToRefreshWithActionHandler:^{
         // prepend data to dataSource, insert cells at top of table view
         // call [tableView.pullToRefreshView stopAnimating] when done
-        [self refreshData];
+        [weakSelf refreshData];
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         // append data to data source, insert new cells at the end of table view
         // call [tableView.infiniteScrollingView stopAnimating] when done
-        [self loadMoreData];
+        [weakSelf loadMoreData];
     }];
 }
 

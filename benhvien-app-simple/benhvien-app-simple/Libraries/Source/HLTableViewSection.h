@@ -14,9 +14,9 @@
 
 @interface HLTableViewSection : NSObject
 
-@property (nonatomic, strong) NSMutableArray *items;
-@property (nonatomic, strong) NSString *headerTitle;
-@property (nonatomic, strong) NSString *footerTitle;
+@property (nonatomic) NSMutableArray *items;
+@property (nonatomic) NSString *headerTitle;
+@property (nonatomic) NSString *footerTitle;
 @property (nonatomic) CGFloat footerHeight;
 @property (nonatomic) CGFloat headerHeight;
 

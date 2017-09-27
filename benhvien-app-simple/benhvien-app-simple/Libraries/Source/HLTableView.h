@@ -22,8 +22,8 @@ typedef void (^HLTableViewOnCellAtIndexPath)(NSIndexPath *indexPath);
 @property (nonatomic, copy) HLTableViewOnSignalBlock onSignal;
 @property (nonatomic, copy) HLTableViewOnDidSelectItem onDidSelectItem;
 @property (nonatomic, copy) HLTableViewOnCellAtIndexPath onCellAtIndexPath;
-@property (nonatomic, strong) NSMutableArray *source;
-@property (nonatomic, assign) NSInteger total;
+@property (nonatomic) NSMutableArray *source;
+@property (nonatomic) NSInteger total;
 
 - (void)registerCell:(Class)cellClass forModel:(Class)modelClass;
 

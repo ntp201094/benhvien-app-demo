@@ -21,6 +21,11 @@
   return self;
 }
 
+- (void)dealloc
+{
+    NSLog(@"[%@]", [self class]);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

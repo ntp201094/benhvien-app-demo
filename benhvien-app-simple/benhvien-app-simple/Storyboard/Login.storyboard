@@ -128,14 +128,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y49-li-nsR" userLabel="Line View">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="2"/>
+                                                <rect key="frame" x="0.0" y="50" width="375" height="0.0"/>
                                                 <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="TwH-nP-Low"/>
+                                                    <constraint firstAttribute="height" constant="0.5" id="TwH-nP-Low"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-AC-BWI" userLabel="Email View">
-                                                <rect key="frame" x="0.0" y="52" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="50" width="375" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r8-lP-aXu">
                                                         <rect key="frame" x="20" y="15" width="76" height="21"/>
@@ -165,14 +165,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-UY-ESj" userLabel="Line View">
-                                                <rect key="frame" x="0.0" y="102" width="375" height="2"/>
+                                                <rect key="frame" x="0.0" y="100" width="375" height="0.5"/>
                                                 <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="GTL-c5-NTp"/>
+                                                    <constraint firstAttribute="height" constant="0.5" id="GTL-c5-NTp"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ3-ZA-D6G" userLabel="Mat khau View">
-                                                <rect key="frame" x="0.0" y="104" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="375" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mật khẩu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU2-tl-qgl">
                                                         <rect key="frame" x="20" y="15" width="66" height="21"/>
@@ -202,14 +202,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seS-gE-9s7" userLabel="Line View">
-                                                <rect key="frame" x="0.0" y="154" width="375" height="2"/>
+                                                <rect key="frame" x="0.0" y="150.5" width="375" height="0.5"/>
                                                 <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="zI8-hB-Fjn"/>
+                                                    <constraint firstAttribute="height" constant="0.5" id="zI8-hB-Fjn"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-LS-dao" userLabel="Thanh Pho View">
-                                                <rect key="frame" x="0.0" y="156" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="151" width="375" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thành Phố:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXm-TQ-5hQ">
                                                         <rect key="frame" x="20" y="15" width="76" height="21"/>
@@ -344,7 +344,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ui-0n-ghd" userLabel="Line View">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="1"/>
+                                                <rect key="frame" x="0.0" y="50" width="375" height="0.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.90982460975646973" green="0.9098050594329834" blue="0.90980887413024902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>

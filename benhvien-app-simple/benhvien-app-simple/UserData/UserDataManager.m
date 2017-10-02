@@ -13,6 +13,7 @@
 @synthesize userId = _userId;
 @synthesize role = _role;
 @synthesize email = _email;
+@synthesize city = _city;
 @synthesize fullName = _fullName;
 
 + (instancetype)sharedClient {
@@ -95,6 +96,20 @@
   } else {
     return @"";
   }
+}
+
+- (void)setCity:(NSString *)city {
+    _city = city;
+    [NSUserDefaults setObject:city forKey:UserCity];
+}
+
+- (NSString *)city {
+    NSString *city = [NSUserDefaults objectForKey:UserCity];
+    if (city) {
+        return city;
+    } else {
+        return @"";
+    }
 }
 
 - (void)setFullName:(NSString *)fullName {

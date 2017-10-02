@@ -21,24 +21,15 @@
   
   self.title = @"Quên mật khẩu";
   [self setupNavigationBarItem];
-  self.forgotEmailView.layer.borderWidth = 0.5f;
-  self.forgotEmailView.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 - (void)setupNavigationBarItem {
   UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Hủy bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelForgotPassword)];
   self.navigationItem.leftBarButtonItem = cancelBarButton;
-  
-  UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Xong" style:UIBarButtonItemStylePlain target:self action:@selector(confirmForgotPassword)];
-  self.navigationItem.rightBarButtonItem = doneBarButton;
 }
 
 - (void)cancelForgotPassword {
   [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)confirmForgotPassword {
-  
 }
 
 @end
